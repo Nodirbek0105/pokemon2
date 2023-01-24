@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./css/bootstrapt.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="website icon" type="svg" href="./img/pokemon_logo 1.svg" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo-div">
+          <a href="./index.html">
+            <h1>
+              <img src="./img/pokemon_logo 1.svg" alt="" />
+            </h1>
+          </a>
+        </div>
+        <div class="parent">
+          <form data-form2>
+            <input type="search" data-input5="" />
+            <button type="submit" class="btn-primary">search</button>
+          </form>
+          <div class="search-div">
+            <img src="./img/search.svg" alt="" data-search="" />
+          </div>
+        </div>
+      </header>
+      <main>
+        <form data-form>
+          <div class="parent">
+            <div>
+              <input data-input placeholder="Image URL"/>
+            </div>
+            <div>
+              <input data-input1 placeholder="Name"/>
+            </div>
+            <div>
+              <input data-input2 placeholder="Type"/>
+            </div>
+            <div>
+              <input data-input3 placeholder="Weight"/>
+            </div>
+            <div>
+              <input data-input4 placeholder="Height"/>
+            </div>
+            <button type="submit" class="btn-primary">
+              add new pokemon
+            </button>
+          </div>
+        </form>
+        <ul data-ul=""></ul>
+      </main>
+    </div>
+    <template>
+      <li class="elli">
+        <div class="divimg divImg">
+          <img data-img src="" alt="">
+        </div>
+        <div class="eldiv divParent">
+          <div class="divLeft">
+            <div class="left-div">
+              <p class="name"></p>
+              <p class="type"></p>
+              <p class="weaknesses"></p>
+            </div>
+            <div class="divLeftBottom">
+              <p class="kg"></p>
+              <p class="height"></p>
+            </div>
+          </div>
+          <div class="divRight">
+            <img src="./img/trash.svg" alt="">
+          </div>
+        </div>
+      </li>
+    </template>
+    <!-- <form data-form3="">
+      <select data-select name="" id="">
+        <option value="Grass">Grass</option>
+        <option value="Poison">Poison</option>
+        <option value="Fire">Fire</option>
+        <option value="Flying">Flying</option>
+        <option value="Water">Water</option>
+        <option value="Bug">Bug</option>
+        <option value="Normal">Normal</option>
+        <option value="Electric">Electric</option>
+        <option value="Ground">Ground</option>
+        <option value="Fighting">Fighting</option>
+        <option value="Psychic">Psychic</option>
+        <option value="Rock">Rock</option>
+        <option value="Ice">Ice</option>
+        <option value="Ghost">Ghost</option>
+        <option value="Dragon">Dragon</option>
+      </select>
+      <button type="submit" class="btn-primary">search with type</button>
+    </form>  -->
+
+    <script src="./js/pokedex.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/search.js"></script>
+  </body>
+</html>
