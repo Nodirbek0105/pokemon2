@@ -5,20 +5,34 @@ var elinput2 = document.querySelector("[data-input2]");
 var elinput3 = document.querySelector("[data-input3]");
 var elinput4 = document.querySelector("[data-input4]");
 var elform = document.querySelector("[data-form]");
-var elTemplate = document.querySelector(".template")
+var elTemplate = document.querySelector("template")
 
-function renderPokemon(pokemons){
-  elUL.innerHTML = ""
-  pokemons.forEach(pokemons => {
-    
-  });
-}
+// renderPokemon(pokemons)
 
-function addCard(pokemon){
+// function renderPokemon(pokemons){
+//   elUL.innerHTML = ""
+//   pokemons.forEach(pokemons => {
+//     elUL.appendChild(createElli(addCard(pokemons)))
+//   });
+// }
 
-  const elli = elTemplate.content.cloneNode(true)
-  elli.querySelector("[data-img]").src = pokemon.img
-}
+// function createElli(){
+//   pokemons.forEach(pokemons => {
+//     var elli = document.createElement("li")
+//     elUL.appendChild(elli)
+//   });
+// }
+
+// function addCard(pokemon){
+//   const elli = elTemplate.content.cloneNode(true)
+//   elli.querySelector("[data-img]").src = pokemon.img
+//   elli.document.querySelector('.name').textContent = pokemon.name
+//   elli.document.querySelector('.type').textContent = pokemon.type
+//   elli.document.querySelector('.weaknesses').textContent = pokemon.weaknesses
+//   elli.document.querySelector('.kg').textContent = pokemon.weight
+//   elli.document.querySelector('.height').textContent = pokemon.height
+//   return elli
+// }
 
 
 elform.addEventListener("submit", function (evt) {
@@ -33,12 +47,11 @@ elform.addEventListener("submit", function (evt) {
   };
   pokemon.name = elinput1.value;
   pokemon.img = elinput.value;
-  pokemon.type = elinput2.value;
+  pokemon.type = elinput2.value.split(" ");
   pokemon.weight = `${elinput3.value} kg`;
   pokemon.height = `${elinput4.value} m`;
 
   pokemons.unshift(pokemon);
-  console.log(pokemons);
   elUL.innerHTML = "";
 
   for (i = 0; i < pokemons.length; i++) {
@@ -98,7 +111,7 @@ elform.addEventListener("submit", function (evt) {
     //   console.log(pokemon);
     // });
   }
-  elinput.value = "";
+  // elinput.value = "";
   elinput1.value = "";
   elinput2.value = "";
   elinput3.value = "";
@@ -168,4 +181,14 @@ for (i = 0; i < pokemons.length; i++) {
     //   console.log(pokemon);
     // });
   });
+}
+
+
+for (let i = 0; i < pokemons.length; i++) {
+  const element = pokemons[i];
+  const element2 = pokemons[i].next_evolution;
+  var arr = []
+  arr.push(element2.length)
+  console.log(arr)
+  
 }

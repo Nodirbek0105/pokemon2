@@ -3,28 +3,27 @@ var elform3 = document.querySelector("[data-form3]");
 var elinput5 = document.querySelector("[data-input5]");
 var elSelect = document.querySelector("[data-select]");
 var elSearch = document.querySelector("[data-search]");
-// var elclose = document.querySelector("[data-close]");
+var elclose = document.querySelector("[data-close]");
+var all = "all";
 
 elSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
   elform2.style.display = "block";
-  elSearch.src = "./img/close.svg";
-  elSearch.setAttribute("data-close", "");
-  elSearch.removeAttribute("data-search");
+  elclose.classList.remove("d-n")
+  elSearch.setAttribute("class", "d-n");
 });
 elclose.addEventListener("click", function (evt) {
   evt.preventDefault();
   elform2.style.display = "none";
-  elclose.src = "./img/search.svg";
-  elSearch.setAttribute("data-search", "");
-  elclose.removeAttribute("data-close");
+  elclose.classList.add("d-n")
+  elSearch.setAttribute("class", "");
 });
 
 elform2.addEventListener("submit", function (evt) {
   evt.preventDefault();
   for (i = 0; i < pokemons.length; i++) {
     const element = pokemons[i];
-    if (elinput5.value == element.name) {
+    if (elinput5.value.toUpperCase() == element.name.toUpperCase()) {
       elUL.innerHTML = "";
       const element = pokemons[i].img;
       const element2 = pokemons[i].name;
