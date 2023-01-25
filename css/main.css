@@ -210,6 +210,11 @@ ul {
 
 .divImg {
   min-width: 260px;
+  height: 62%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 101%;
 }
 @media (max-width: 300px) {
   .divImg {
@@ -259,22 +264,19 @@ button {
 
 p {
   margin-bottom: 0;
+  text-transform: capitalize;
 }
 
 .elli {
   background-color: #fff;
   padding: 0 1px;
   margin: 10px;
+  min-height: 360px;
   height: 360px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  border: 2px solid #000;
   border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
   max-width: 265px;
 }/*# sourceMappingURL=main.css.map */
