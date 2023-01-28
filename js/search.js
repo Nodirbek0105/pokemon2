@@ -62,6 +62,7 @@ function weaknessesPokemon(pokemon) {
       elUL.appendChild(createElli(pokemoni))
     }
     if (element.includes(elSelectweaknesses.value)) {
+      // renderPokemon(pokemoni)
       elUL.appendChild(createElli(pokemoni))
     } 
   });

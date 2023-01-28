@@ -5,11 +5,6 @@
   font-family: "Roboto", sans-serif;
   word-wrap: break-word;
 }
-form[data-form] {
-  .parent {
-    max-width: 1200px;
-  }
-}
 
 header {
   display: flex;
@@ -45,25 +40,13 @@ body {
   justify-content: center;
   gap: 30px;
 }
-.divImg {
-  border-bottom: 3px solid !important;
-  border-top: transparent !important;
-  border-left: transparent !important;
-  border-right: transparent !important;
-}
+
 .divRight {
   width: 10%;
   height: 100%;
   display: flex;
   align-items: baseline;
   justify-content: center;
-}
-.divLeftBottom {
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  position: relative;
-  gap: 40%;
 }
 .divLeft {
   width: 90%;
@@ -102,19 +85,14 @@ h1 {
 .d-n {
   display: none;
 }
-ul {
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-}
 
 .parent {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 1200px;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-around;
   @media (max-width: 210px) {
     div {
       display: flex;
@@ -125,14 +103,6 @@ ul {
       }
     }
   }
-}
-
-form,
-.parent {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 input {
@@ -159,6 +129,10 @@ input {
 ul {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
   li {
     & {
       @media (max-width: 286px) {
@@ -192,10 +166,6 @@ ul {
 
 .heart {
   transform: scale(0.45);
-  -webkit-transform: scale(0.45);
-  -moz-transform: scale(0.45);
-  -ms-transform: scale(0.45);
-  -o-transform: scale(0.45);
 }
 
 .left-div {
@@ -211,6 +181,10 @@ ul {
   align-items: center;
   justify-content: center;
   width: 101%;
+  border-bottom: 3px solid !important;
+  border-top: transparent !important;
+  border-left: transparent !important;
+  border-right: transparent !important;
   @media (max-width: 300px) {
     min-width: 176.75px;
     height: 50%;
@@ -239,6 +213,11 @@ option {
 }
 
 .divLeftBottom {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  position: relative;
+  gap: 40%;
   @media (max-width: 300px) {
     gap: 10%;
   }
@@ -255,6 +234,7 @@ button {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
+  max-width: 122px;
 }
 
 form[data-form2] {
@@ -280,14 +260,10 @@ form[data-form2] {
     -moz-border-radius: 0 15px 15px 0;
     -ms-border-radius: 0 15px 15px 0;
     -o-border-radius: 0 15px 15px 0;
-  }
-  @media (max-width: 305px) {
-    input {
+    @media (max-width: 305px) {
       width: 100px;
     }
-  }
-  @media (max-width: 190px) {
-    input {
+    @media (max-width: 190px) {
       width: 90px;
     }
   }
@@ -300,7 +276,6 @@ p {
 
 .elli {
   background-color: #fff;
-  padding: 0 1px;
   margin: 10px;
   min-height: 360px;
   height: 360px;
@@ -308,20 +283,29 @@ p {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  // border: 2px solid #000;
   border-radius: 20px;
-  // -webkit-border-radius: 20px;
-  // -moz-border-radius: 20px;
-  // -ms-border-radius: 20px;
-  // -o-border-radius: 20px;
   max-width: 265px;
 }
 
-.header{
-  @media (max-width:769px) {
+.header {
+  @media (max-width: 769px) {
     justify-content: space-between;
   }
-  @media (max-width:768px) {
+  @media (max-width: 768px) {
     justify-content: center;
   }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
 }
