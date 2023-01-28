@@ -150,6 +150,11 @@ input {
   border: none;
   outline: none;
   margin: 10px;
+  border-radius: 13px;
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  -ms-border-radius: 13px;
+  -o-border-radius: 13px;
 }
 ul {
   display: flex;
@@ -180,6 +185,9 @@ ul {
 .eldiv {
   height: 38%;
   width: 100%;
+  @media (max-width: 300px) {
+    height: 50%;
+  }
 }
 
 .heart {
@@ -205,18 +213,25 @@ ul {
   width: 101%;
   @media (max-width: 300px) {
     min-width: 176.75px;
+    height: 50%;
+  }
+}
+
+.weaknesses {
+  @media (max-width: 300px) {
+    max-width: 100px;
   }
 }
 
 select {
   padding: 5px;
-  border-radius: 13px;
+  border-radius: 20px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
-  -webkit-border-radius: 13px;
-  -moz-border-radius: 13px;
-  -ms-border-radius: 13px;
-  -o-border-radius: 13px;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 option {
@@ -235,17 +250,45 @@ button {
 
 input,
 button {
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 form[data-form2] {
-  @media (max-width: 260px) {
+  @media (max-width: 255px) {
+    justify-content: center;
+  }
+  svg {
+    width: 34px;
+    height: 34px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 15px 0 0 15px;
+    -webkit-border-radius: 15px 0 0 15px;
+    -moz-border-radius: 15px 0 0 15px;
+    -ms-border-radius: 15px 0 0 15px;
+    -o-border-radius: 15px 0 0 15px;
+    border-right: 1px solid #aaa;
+  }
+  input {
+    border-left: 1px solid #aaa;
+    border-radius: 0 15px 15px 0;
+    -webkit-border-radius: 0 15px 15px 0;
+    -moz-border-radius: 0 15px 15px 0;
+    -ms-border-radius: 0 15px 15px 0;
+    -o-border-radius: 0 15px 15px 0;
+  }
+  @media (max-width: 305px) {
     input {
       width: 100px;
+    }
+  }
+  @media (max-width: 190px) {
+    input {
+      width: 90px;
     }
   }
 }
@@ -272,4 +315,13 @@ p {
   // -ms-border-radius: 20px;
   // -o-border-radius: 20px;
   max-width: 265px;
+}
+
+.header{
+  @media (max-width:769px) {
+    justify-content: space-between;
+  }
+  @media (max-width:768px) {
+    justify-content: center;
+  }
 }

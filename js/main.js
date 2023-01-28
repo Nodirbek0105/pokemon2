@@ -4,6 +4,7 @@ var elinput1 = document.querySelector("[data-input1]");
 var elinput2 = document.querySelector("[data-input2]");
 var elinput3 = document.querySelector("[data-input3]");
 var elinput4 = document.querySelector("[data-input4]");
+var elinput6 = document.querySelector("[data-input6]");
 var elform = document.querySelector("[data-form]");
 var elTemplate = document.querySelector("template");
 
@@ -11,10 +12,7 @@ renderPokemon(pokemons);
 
 function renderPokemon(pokemons) {
   elUL.innerHTML = "";
-  for (let i = 0; i < pokemons.length; i++) {
-    const pokemon = pokemons[i];
-    elUL.appendChild(createElli(pokemon));
-  }
+  pokemons.forEach(pokemon => elUL.appendChild(createElli(pokemon)));
 }
 
 function createElli(pokemon) {
@@ -38,10 +36,12 @@ elform.addEventListener("submit", function (evt) {
     height: null,
     weight: null,
     type: [],
+    weaknesses: []
   };
   pokemon.name = elinput1.value;
   pokemon.img = elinput.value;
   pokemon.type = elinput2.value.split(" ");
+  pokemon.weaknesses = elinput6.value.split(" ");
   pokemon.weight = `${elinput3.value} kg`;
   pokemon.height = `${elinput4.value} m`;
 
@@ -52,4 +52,5 @@ elform.addEventListener("submit", function (evt) {
   elinput2.value = "";
   elinput3.value = "";
   elinput4.value = "";
+  elinput6.value = "";
 });

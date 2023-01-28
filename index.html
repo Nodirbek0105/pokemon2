@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokedex</title>
+    <title>Pokemon</title>
     <link rel="stylesheet" href="./css/bootstrapt.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="website icon" type="svg" href="./img/pokemon_logo 1.svg" />
   </head>
   <body>
     <div class="container">
-      <header>
+      <header data-header>
         <div class="logo-div">
           <a href="./index.html">
             <h1>
@@ -21,16 +21,94 @@
         </div>
         <div class="parent">
           <form data-form2>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="Icon/Outline/search">
+                <path
+                  id="Mask"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M5 11C5 7.691 7.691 5 11 5C14.309 5 17 7.691 17 11C17 14.309 14.309 17 11 17C7.691 17 5 14.309 5 11ZM20.707 19.293L17.312 15.897C18.365 14.543 19 12.846 19 11C19 6.589 15.411 3 11 3C6.589 3 3 6.589 3 11C3 15.411 6.589 19 11 19C12.846 19 14.543 18.365 15.897 17.312L19.293 20.707C19.488 20.902 19.744 21 20 21C20.256 21 20.512 20.902 20.707 20.707C21.098 20.316 21.098 19.684 20.707 19.293Z"
+                  fill="gray"
+                />
+                <mask
+                  id="mask0_1_25"
+                  style="mask-type: alpha"
+                  maskUnits="userSpaceOnUse"
+                  x="3"
+                  y="3"
+                  width="19"
+                  height="18"
+                >
+                  <path
+                    id="Mask_2"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5 11C5 7.691 7.691 5 11 5C14.309 5 17 7.691 17 11C17 14.309 14.309 17 11 17C7.691 17 5 14.309 5 11ZM20.707 19.293L17.312 15.897C18.365 14.543 19 12.846 19 11C19 6.589 15.411 3 11 3C6.589 3 3 6.589 3 11C3 15.411 6.589 19 11 19C12.846 19 14.543 18.365 15.897 17.312L19.293 20.707C19.488 20.902 19.744 21 20 21C20.256 21 20.512 20.902 20.707 20.707C21.098 20.316 21.098 19.684 20.707 19.293Z"
+                    fill="white"
+                  />
+                </mask>
+                <g mask="url(#mask0_1_25)">
+                  <g id="&#240;&#159;&#142;&#168; Color">
+                    <rect id="Base" width="24" height="24" fill="#aaa" />
+                  </g>
+                </g>
+              </g>
+            </svg>
             <input type="search" data-input5="" />
             <button type="submit" class="btn-primary">search</button>
           </form>
           <div class="search-div">
-            <img width="24px" height="24px" src="./img/search.svg" alt="" data-search=""/>
-            <img width="24px" height="24px" src="./img/close.svg"  alt="" data-close=""  class="d-n"/>
+            <img
+              width="24px"
+              height="24px"
+              src="./img/search.svg"
+              alt=""
+              data-search=""
+            />
+            <img
+              width="24px"
+              height="24px"
+              src="./img/close.svg"
+              alt=""
+              data-close=""
+              class="d-n"
+            />
           </div>
         </div>
+      </header>
+      <main>
+        <form data-form>
+          <div class="parent">
+            <div>
+              <input data-input placeholder="Image URL" />
+            </div>
+            <div>
+              <input data-input1 placeholder="Name" />
+            </div>
+            <div>
+              <input data-input2 placeholder="Type" />
+            </div>
+            <div>
+              <input data-input6 placeholder="Weaknesses" />
+            </div>
+            <div>
+              <input data-input3 placeholder="Weight" />
+            </div>
+            <div>
+              <input data-input4 placeholder="Height" />
+            </div>
+            <button type="submit" class="btn-primary">add new pokemon</button>
+          </div>
+        </form>
         <form data-form3="">
           <select data-select name="" id="">
+            <option value="all">All</option>
             <option value="Grass">Grass</option>
             <option value="Poison">Poison</option>
             <option value="Fire">Fire</option>
@@ -47,40 +125,39 @@
             <option value="Ghost">Ghost</option>
             <option value="Dragon">Dragon</option>
           </select>
-          <button type="submit" class="btn-primary">search with type</button>
+          <button type="submit" class="btn-primary">search type</button>
         </form>
-    
-      </header>
-      <main>
-        <form data-form>
-          <div class="parent">
-            <div>
-              <input data-input placeholder="Image URL"/>
-            </div>
-            <div>
-              <input data-input1 placeholder="Name"/>
-            </div>
-            <div>
-              <input data-input2 placeholder="Type"/>
-            </div>
-            <div>
-              <input data-input3 placeholder="Weight"/>
-            </div>
-            <div>
-              <input data-input4 placeholder="Height"/>
-            </div>
-            <button type="submit" class="btn-primary">
-              add new pokemon
-            </button>
-          </div>
+        <form data-form-weaknesses="">
+          <select data-select-weaknesses>
+            <option value="all">All</option>
+            <option value="Fire">Fire</option>
+            <option value="Ice">Ice</option>
+            <option value="Flying">Flying</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Water">Water</option>
+            <option value="Ground">Ground</option>
+            <option value="Rock">Rock</option>
+            <option value="Electric">Electric</option>
+            <option value="Grass">Grass</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Poison">Poison</option>
+            <option value="Bug">Bug</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Dark">Dark</option>
+            <option value="Steel">Steel</option>
+            <option value="Dragon">Dragon</option>
+          </select>
+          <button type="submit" class="btn-primary">search weaknesses</button>
         </form>
+
         <ul data-ul=""></ul>
       </main>
     </div>
     <template>
       <li class="elli">
         <div class="divimg divImg">
-          <img data-img src="" alt="">
+          <img data-img src="" alt="" />
         </div>
         <div class="eldiv divParent">
           <div class="divLeft">
@@ -95,12 +172,12 @@
             </div>
           </div>
           <div class="divRight">
-            <img src="./img/trash.svg" alt="">
+            <img src="./img/trash.svg" alt="" />
           </div>
         </div>
       </li>
     </template>
-    
+
     <script src="./js/pokedex.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/search.js"></script>
