@@ -62,7 +62,6 @@ function weaknessesPokemon(pokemon) {
       elUL.appendChild(createElli(pokemoni))
     }
     if (element.includes(elSelectweaknesses.value)) {
-      // renderPokemon(pokemoni)
       elUL.appendChild(createElli(pokemoni))
     } 
   });
@@ -70,9 +69,12 @@ function weaknessesPokemon(pokemon) {
 
 function searchPokemon(pokemons) {
   elUL.innerHTML = "";
+  const searchArr = []
   pokemons.forEach(pokemon => {
     if (elinput5.value.toUpperCase() == pokemon.name.toUpperCase()) {
-      elUL.appendChild(createElli(pokemon));
+      searchArr.push(pokemon)
     }
+    // elUL.appendChild(createElli(pokemon));
+    renderPokemon(searchArr)
   });
 }

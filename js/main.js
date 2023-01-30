@@ -48,7 +48,6 @@ elform.addEventListener("submit", function (evt) {
 
   pokemons.unshift(pokemon);
   renderPokemon(pokemons);
-  // elinput.value = "";
   elinput1.value = "";
   elinput2.value = "";
   elinput3.value = "";
