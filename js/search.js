@@ -24,18 +24,18 @@ elclose.addEventListener("click", function (evt) {
   elHeader.classList.remove("header")
 });
 
-elform2.addEventListener("submit", function (evt) {
+elinput5.addEventListener("input", function (evt) {
   evt.preventDefault();
   searchPokemon(pokemons);
-  elinput5.value = ""
+  // elinput5.value = ""
 });
 
-elform3.addEventListener("submit", function (evt) {
+elSelect.addEventListener("change", function (evt) {
   evt.preventDefault();
   typePokemon(pokemons)
 });
 
-elWeaknesses.addEventListener("submit", function (evt) {
+elSelectweaknesses.addEventListener("change", function (evt) {
   evt.preventDefault();
   weaknessesPokemon(pokemons)
 });
@@ -71,7 +71,7 @@ function searchPokemon(pokemons) {
   elUL.innerHTML = "";
   const searchArr = []
   pokemons.forEach(pokemon => {
-    if (elinput5.value.toUpperCase() == pokemon.name.toUpperCase()) {
+    if (pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase())) {
       searchArr.push(pokemon)
     }
     // elUL.appendChild(createElli(pokemon));
