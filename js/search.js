@@ -44,7 +44,7 @@ function typePokemon(pokemon) {
   elUL.innerHTML = "";
   pokemon.forEach(pokemoni => {
     const element = pokemoni.type
-    if (elSelect.value == "all") {
+    if (elSelect.value == "all" || elSelect.value == "type") {
       elUL.appendChild(createElli(pokemoni))
     }
     if (element.includes(elSelect.value)) {
@@ -58,7 +58,7 @@ function weaknessesPokemon(pokemon) {
   elUL.innerHTML = "";
   pokemon.forEach(pokemoni => {
     const element = pokemoni.weaknesses
-    if (elSelectweaknesses.value == "all") {
+    if (elSelectweaknesses.value == "all" || elSelectweaknesses.value == "weaknesses") {
       elUL.appendChild(createElli(pokemoni))
     }
     if (element.includes(elSelectweaknesses.value)) {
@@ -78,3 +78,5 @@ function searchPokemon(pokemons) {
     renderPokemon(searchArr)
   });
 }
+elSelectweaknesses.style.width = "130px"
+elSelect.style.width = elSelectweaknesses.style.width

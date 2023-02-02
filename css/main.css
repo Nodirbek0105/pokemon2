@@ -22,10 +22,22 @@ header {
     display: none;
   }
 }
+@media (max-width: 421px) {
+  header {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 420px) {
+  header {
+    justify-content: center;
+    margin: 10px;
+  }
+}
 
 form[data-form2] {
   display: none;
-  min-width: 232px;
+  min-width: 157px;
+  justify-content: center;
 }
 @media (max-width: 530px) {
   form[data-form2] {
@@ -306,14 +318,15 @@ p {
   max-width: 265px;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 421px) {
   .header {
     justify-content: space-between;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 420px) {
   .header {
     justify-content: center;
+    margin: 10px;
   }
 }
 

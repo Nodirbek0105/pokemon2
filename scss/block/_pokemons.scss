@@ -20,10 +20,18 @@ header {
       display: none;
     }
   }
+  @media (max-width: 421px) {
+    justify-content: space-between;
+  }
+  @media (max-width: 420px) {
+    justify-content: center;
+    margin: 10px;
+  }
 }
 form[data-form2] {
   display: none;
-  min-width: 232px;
+  min-width: 157px;
+  justify-content: center;
   @media (max-width: 530px) {
     display: flex;
     justify-content: space-around;
@@ -288,11 +296,12 @@ p {
 }
 
 .header {
-  @media (max-width: 769px) {
+  @media (max-width: 421px) {
     justify-content: space-between;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 420px) {
     justify-content: center;
+    margin: 10px;
   }
 }
 
