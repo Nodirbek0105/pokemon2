@@ -6,13 +6,14 @@
   word-wrap: break-word;
 }
 
-header {
+header  {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: -o-moz-aviable;
   flex-wrap: wrap;
   gap: 20px;
+  background-color: #ffd845;
 
   @media (max-width: 530px) {
     justify-content: center;
@@ -242,7 +243,6 @@ button {
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
-  max-width: 122px;
 }
 
 form[data-form2] {
@@ -325,10 +325,10 @@ img[data-img] {
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   -o-transform: scale(1.2);
-  transition: all .8s ease-in-out;
-  -webkit-transition: all .8s ease-in-out;
-  -moz-transition: all .8s ease-in-out;
-  -ms-transition: all .8s ease-in-out;
-  -o-transition: all .8s ease-in-out;
+  transition:.8s cubic-bezier(0, -2.45, 1, 3.53);
+  -webkit-transition:.8s cubic-bezier(0, -2.45, 1, 3.53);
+  -moz-transition:.8s cubic-bezier(0, -2.45, 1, 3.53);
+  -ms-transition:.8s cubic-bezier(0, -2.45, 1, 3.53);
+  -o-transition:.8s cubic-bezier(0, -2.45, 1, 3.53);
 }
 }
