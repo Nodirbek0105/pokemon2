@@ -53,3 +53,5 @@ elform.addEventListener("submit", function (evt) {
   pokemons.unshift(pokemon);
   renderPokemon(pokemons);
 });
+
+elform2.style.maxWidth = `${34 + elinput5.width}`

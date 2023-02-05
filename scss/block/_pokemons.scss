@@ -5,6 +5,9 @@
   font-family: "Roboto", sans-serif;
   word-wrap: break-word;
 }
+html {
+  scroll-behavior: smooth;
+}
 ::selection {
   background-color: cyan;
   color: rgb(75, 56, 56);
@@ -35,15 +38,15 @@ header {
   }
 }
 form[data-form2] {
-  display: none;  
+  display: none;
   justify-content: center;
-  input{
+  input {
     width: 116px !important;
   }
   @media (max-width: 530px) {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content:center;
     width: -o-moz-aviable;
     min-width: 100px !important;
   }
@@ -197,8 +200,8 @@ ul {
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
-  img{
-    max-width: calc((262.2px / 100)*80);
+  img {
+    max-width: calc((262.2px / 100) * 80);
   }
   @media (max-width: 300px) {
     min-width: 176.75px;
@@ -309,6 +312,7 @@ main {
   justify-content: center;
   gap: 10px;
   flex-direction: column;
+  margin-top: 10px;
 }
 form {
   display: flex;
@@ -343,4 +347,17 @@ select[data-select-weaknesses] {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
+}
+.up-div {
+  transform: rotate(270deg);
+  position: fixed;
+  right: 10px;
+  top: 92%;
+  z-index: 10;
+  a {
+    text-decoration: none;
+    padding: 15px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+  }
 }
