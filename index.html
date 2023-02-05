@@ -10,19 +10,15 @@
     <link rel="website icon" type="svg" href="./img/pokemon_logo 1.svg" />
   </head>
   <body>
-    
-    <div class="container">
-      <header data-header>
-
-          <div class="logo-div">
-            <a href="./index.html">
-              <h1>
-                <img src="./img/pokemon_logo 1.svg" alt="" />
-              </h1>
-            </a>
-          </div>
-          <div class="parent">
-            <form data-form2>
+    <!-- required bootstrap js -->
+    <!-- <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="./img/pokemon_logo 1.svg" alt="", height="34">
+        </a>
+        <div class="parent">
+          <form data-form2>
+            <label for="search">
               <svg
                 width="24"
                 height="24"
@@ -62,27 +58,101 @@
                   </g>
                 </g>
               </svg>
-              <input type="search" data-input5="" />
-              <!-- <button type="submit" class="btn-primary">search</button> -->
-            </form>
-            <div class="search-div">
-              <img
-                width="24px"
-                height="24px"
-                src="./img/search.svg"
-                alt=""
-                data-search=""
-              />
-              <img
-                width="24px"
-                height="24px"
-                src="./img/close.svg"
-                alt=""
-                data-close=""
-                class="d-n"
-              />
-            </div>
+            </label>
+            <input id="search" type="search" data-input5="" />
+          </form>
+          <div class="search-div">
+            <img
+              width="24px"
+              height="24px"
+              src="./img/search.svg"
+              alt=""
+              data-search=""
+            />
+            <img
+              width="24px"
+              height="24px"
+              src="./img/close.svg"
+              alt=""
+              data-close=""
+              class="d-n"
+            />
           </div>
+        </div>
+      </div>
+    </nav> -->
+    <div data-container class="container">
+      <header data-header>
+        <div class="logo-div">
+          <a href="./index.html">
+            <h1>
+              <img src="./img/pokemon_logo 1.svg" alt="" />
+            </h1>
+          </a>
+        </div>
+        <div class="parent">
+          <form data-form2>
+            <label for="search">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="Icon/Outline/search">
+                  <path
+                    id="Mask"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5 11C5 7.691 7.691 5 11 5C14.309 5 17 7.691 17 11C17 14.309 14.309 17 11 17C7.691 17 5 14.309 5 11ZM20.707 19.293L17.312 15.897C18.365 14.543 19 12.846 19 11C19 6.589 15.411 3 11 3C6.589 3 3 6.589 3 11C3 15.411 6.589 19 11 19C12.846 19 14.543 18.365 15.897 17.312L19.293 20.707C19.488 20.902 19.744 21 20 21C20.256 21 20.512 20.902 20.707 20.707C21.098 20.316 21.098 19.684 20.707 19.293Z"
+                    fill="gray"
+                  />
+                  <mask
+                    id="mask0_1_25"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="3"
+                    y="3"
+                    width="19"
+                    height="18"
+                  >
+                    <path
+                      id="Mask_2"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5 11C5 7.691 7.691 5 11 5C14.309 5 17 7.691 17 11C17 14.309 14.309 17 11 17C7.691 17 5 14.309 5 11ZM20.707 19.293L17.312 15.897C18.365 14.543 19 12.846 19 11C19 6.589 15.411 3 11 3C6.589 3 3 6.589 3 11C3 15.411 6.589 19 11 19C12.846 19 14.543 18.365 15.897 17.312L19.293 20.707C19.488 20.902 19.744 21 20 21C20.256 21 20.512 20.902 20.707 20.707C21.098 20.316 21.098 19.684 20.707 19.293Z"
+                      fill="white"
+                    />
+                  </mask>
+                  <g mask="url(#mask0_1_25)">
+                    <g id="&#240;&#159;&#142;&#168; Color">
+                      <rect id="Base" width="24" height="24" fill="#aaa" />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </label>
+            <input id="search" type="search" data-input5="" />
+          </form>
+          <div class="search-div">
+            <img
+              width="24px"
+              height="24px"
+              src="./img/search.svg"
+              alt=""
+              data-search=""
+            />
+            <img
+              width="24px"
+              height="24px"
+              src="./img/close.svg"
+              alt=""
+              data-close=""
+              class="d-n"
+            />
+          </div>
+        </div>
       </header>
       <main>
         <form data-form>
@@ -108,10 +178,9 @@
             <button type="submit" class="btn-primary">add new pokemon</button>
           </div>
         </form>
-        <form data-form3="">
+        <div class="filter">
           <select data-select name="" id="">
-             <option value="type"> All Types <!-- pokemons --></option>
-            <!-- <option value="all">All</option> -->
+            <option value="type">All Types</option>
             <option value="Grass">Grass</option>
             <option value="Poison">Poison</option>
             <option value="Fire">Fire</option>
@@ -127,13 +196,9 @@
             <option value="Ice">Ice</option>
             <option value="Ghost">Ghost</option>
             <option value="Dragon">Dragon</option>
-          </select>
-        </form>
-        <form data-form-weaknesses="">
+          </select> 
           <select data-select-weaknesses>
-            
             <option value="weaknesses">Weaknesses</option>
-            <!-- <option value="all">All</option> -->
             <option value="Fire">Fire</option>
             <option value="Ice">Ice</option>
             <option value="Flying">Flying</option>
@@ -151,9 +216,8 @@
             <option value="Dark">Dark</option>
             <option value="Steel">Steel</option>
             <option value="Dragon">Dragon</option>
-          </select>
-        </form>
-
+          </select>         
+        </div>
         <ul data-ul=""></ul>
       </main>
     </div>
@@ -175,7 +239,7 @@
             </div>
           </div>
           <div class="divRight">
-            <img src="./img/trash.svg" alt="" />
+            <img data-delete src="./img/trash.svg" alt="" />
           </div>
         </div>
       </li>

@@ -6,18 +6,20 @@ var elinput3 = document.querySelector("[data-input3]");
 var elinput4 = document.querySelector("[data-input4]");
 var elinput6 = document.querySelector("[data-input6]");
 var elform = document.querySelector("[data-form]");
+var elNavbar = document.querySelector(".navbar");
+var elContainer = document.querySelector("[data-container]");
 var elTemplate = document.querySelector("template");
 
 renderPokemon(pokemons);
 
 function renderPokemon(pokemons) {
   elUL.innerHTML = "";
-  pokemons.forEach(pokemon => elUL.appendChild(createElli(pokemon)))
-  // pokemons.forEach(pokemon => elUL.appendChild(createElli(pokemon)));
+  pokemons.forEach((pokemon) => elUL.appendChild(createElli(pokemon)));
 }
 
 function createElli(pokemon) {
   const elTemp = elTemplate.content.cloneNode(true);
+
   elTemp.querySelector("[data-img]").src = pokemon.img;
   elTemp.querySelector("[data-img]").alt = `img pokemon ${pokemon.name}`;
   elTemp.querySelector(".name").textContent = pokemon.name;
@@ -25,6 +27,7 @@ function createElli(pokemon) {
   elTemp.querySelector(".weaknesses").textContent = pokemon.weaknesses;
   elTemp.querySelector(".kg").textContent = pokemon.weight;
   elTemp.querySelector(".height").textContent = pokemon.height;
+
   return elTemp;
 }
 
@@ -37,8 +40,9 @@ elform.addEventListener("submit", function (evt) {
     height: null,
     weight: null,
     type: [],
-    weaknesses: []
+    weaknesses: [],
   };
+
   pokemon.name = elinput1.value;
   pokemon.img = elinput.value;
   pokemon.type = elinput2.value.split(" ");
@@ -48,9 +52,4 @@ elform.addEventListener("submit", function (evt) {
 
   pokemons.unshift(pokemon);
   renderPokemon(pokemons);
-  elinput1.value = "";
-  elinput2.value = "";
-  elinput3.value = "";
-  elinput4.value = "";
-  elinput6.value = "";
 });
