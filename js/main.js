@@ -67,8 +67,8 @@ elinput3.addEventListener("input" , evt =>{
   }
 })
 elinput4.addEventListener("input" , evt =>{
-  if(elinput4.value > 10){
-    elinput4.value = 10
+  if(elinput4.value > 100){
+    elinput4.value = 100
   }if(elinput4.value < 1){
     elinput4.value = 1
   }
