@@ -44,12 +44,11 @@ elSelectweaknesses.addEventListener("change", function (evt) {
 
 function typePokemon(pokemon) {
   elUL.innerHTML = "";
-
   pokemon.forEach(pokemoni => {
     const element = pokemoni.type
 
-    if (elSelect.value == "all" || elSelect.value == "type") {
-      elUL.appendChild(createElli(pokemoni))
+    if (elSelect.value == "type") {
+      renderPokemon(pokemons)
     }
 
     if (element.includes(elSelect.value)) {
@@ -61,11 +60,11 @@ function typePokemon(pokemon) {
 
 function weaknessesPokemon(pokemon) {
   elUL.innerHTML = "";
-
+  
   pokemon.forEach(pokemoni => {
     const element = pokemoni.weaknesses
 
-    if (elSelectweaknesses.value == "all" || elSelectweaknesses.value == "weaknesses") {
+    if (elSelectweaknesses.value == "weaknesses") {
       elUL.appendChild(createElli(pokemoni))
     }
 

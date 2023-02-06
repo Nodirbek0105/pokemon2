@@ -52,6 +52,24 @@ elform.addEventListener("submit", function (evt) {
 
   pokemons.unshift(pokemon);
   renderPokemon(pokemons);
-});
 
-elform2.style.maxWidth = `${34 + elinput5.width}`
+  elinput1.value = ""
+  elinput2.value = ""
+  elinput3.value = ""
+  elinput4.value = ""
+  elinput6.value = ""
+});
+elinput3.addEventListener("input" , evt =>{
+  if(elinput3.value < 1){
+    elinput3.value = 1
+  }if(elinput3.value > 300){
+    elinput3.value = 300
+  }
+})
+elinput4.addEventListener("input" , evt =>{
+  if(elinput4.value > 10){
+    elinput4.value = 10
+  }if(elinput4.value < 1){
+    elinput4.value = 1
+  }
+})

@@ -417,15 +417,24 @@ select[data-select-weaknesses] {
 }
 
 .up-div {
-  transform: rotate(270deg);
   position: fixed;
   right: 10px;
   top: 92%;
   z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0d6efd;
 }
 .up-div a {
   text-decoration: none;
-  padding: 15px;
-  background-color: #0d6efd;
   border-radius: 50%;
+}
+.up-div a img {
+  transform: scale(0.5);
+}
+@media (max-width: 500px) {
+  .up-div {
+    right: 0;
+  }
 }/*# sourceMappingURL=main.css.map */

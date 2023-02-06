@@ -46,7 +46,7 @@ form[data-form2] {
   @media (max-width: 530px) {
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     width: -o-moz-aviable;
     min-width: 100px !important;
   }
@@ -349,15 +349,22 @@ select[data-select-weaknesses] {
   gap: 10px;
 }
 .up-div {
-  transform: rotate(270deg);
   position: fixed;
   right: 10px;
   top: 92%;
   z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0d6efd;
   a {
     text-decoration: none;
-    padding: 15px;
-    background-color: #0d6efd;
     border-radius: 50%;
+    img {
+      transform: scale(0.5);
+    }
+  }
+  @media (max-width:500px) {
+    right: 0;
   }
 }
