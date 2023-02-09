@@ -14,7 +14,7 @@ renderPokemon(pokemons);
 
 function renderPokemon(pokemons) {
   elUL.innerHTML = "";
-  pokemons.forEach((pokemon) => elUL.appendChild(createElli(pokemon)));
+  pokemons.forEach(pokemon => elUL.appendChild(createElli(pokemon)));
 }
 
 function createElli(pokemon) {

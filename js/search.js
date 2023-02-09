@@ -44,35 +44,33 @@ elSelectweaknesses.addEventListener("change", function (evt) {
 
 function typePokemon(pokemon) {
   elUL.innerHTML = "";
-  pokemon.forEach(pokemoni => {
-    const element = pokemoni.type
+  // pokemon.forEach(pokemoni => {
+  //   const element = pokemoni.type
 
-    if (elSelect.value == "type") {
-      renderPokemon(pokemons)
-    }
+  // });
+  
+  if (elSelect.value == "type") {
+    renderPokemon(pokemons)
+  }
 
-    if (element.includes(elSelect.value)) {
-      elUL.appendChild(createElli(pokemoni))
-    } 
-  });
+  else {
+    renderPokemon(typeFilter(pokemon))
+  } 
 }
 
 
 function weaknessesPokemon(pokemon) {
   elUL.innerHTML = "";
   
-  pokemon.forEach(pokemoni => {
-    const element = pokemoni.weaknesses
 
     if (elSelectweaknesses.value == "weaknesses") {
-      elUL.appendChild(createElli(pokemoni))
+      renderPokemon(pokemon)
     }
+    else{
+      renderPokemon(weaknessFilter(pokemon))
+    }
+  };
 
-    if (element.includes(elSelectweaknesses.value)) {
-      elUL.appendChild(createElli(pokemoni))
-    } 
-  });
-}
 
 function searchPokemon(pokemons) {
   elUL.innerHTML = "";
@@ -88,3 +86,22 @@ function searchPokemon(pokemons) {
     renderPokemon(searchArr)
   });
 }
+
+function typeFilter(array){
+  let filteredTypeArray = pokemons.filter(element =>{
+    if( element.type.includes(elSelect.value)){
+      return true
+    }
+  } )
+  return filteredTypeArray
+}
+
+function weaknessFilter(array){
+  let filteredWeaknessesArray = pokemons.filter(element =>{
+    if( element.weaknesses.includes(elSelectweaknesses.value)){
+      return true
+    }
+  } )
+  return filteredWeaknessesArray
+}
+
