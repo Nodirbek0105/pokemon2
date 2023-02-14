@@ -2,6 +2,7 @@ var elform2 = document.querySelector("[data-form2]");
 var elinput5 = document.querySelector("[data-input5]");
 var elSelect = document.querySelector("[data-select]");
 var elSelectweaknesses = document.querySelector("[data-select-weaknesses]");
+var elSelectSort = document.querySelector("[data-select-sort]");
 var elSearch = document.querySelector("[data-search]");
 var elclose = document.querySelector("[data-close]");
 var elHeader = document.querySelector("[data-header]");
@@ -105,3 +106,29 @@ function weaknessFilter(array){
   return filteredWeaknessesArray
 }
 
+elSelectSort.addEventListener("change" , evt =>{
+    evt.preventDefault()
+  sortPokemon(pokemons)
+})
+
+ function sortPokemon(pokemons){
+    if(elSelectSort.value = "az"){
+    const sortedPokemon = pokemons.sort((a,b) => a.name.charCodeAt()-b.name.charCodeAt() )
+renderPokemon(sortedPokemon)
+}   if(elSelectSort.value = "za"){
+    const sortedPokemon = pokemons.sort((a,b) => b.name.charCodeAt()-a.name.charCodeAt() )
+renderPokemon(sortedPokemon)
+}   if(elSelectSort.value = "wu"){
+    const sortedPokemon = pokemons.sort((a,b) => a.weight.charCodeAt()-b.weight.charCodeAt() )
+renderPokemon(sortedPokemon)
+}if(elSelectSort.value = "wd"){
+    const sortedPokemon = pokemons.sort((a,b) => b.weight.charCodeAt()-a.weight.charCodeAt() )
+renderPokemon(sortedPokemon)
+}if(elSelectSort.value = "hu"){
+    const sortedPokemon = pokemons.sort((a,b) => a.height.charCodeAt()-b.height.charCodeAt() )
+renderPokemon(sortedPokemon)
+}if(elSelectSort.value = "hd"){
+    const sortedPokemon = pokemons.sort((a,b) => b.height.charCodeAt()-a.height.charCodeAt() )
+renderPokemon(sortedPokemon)
+}
+}
