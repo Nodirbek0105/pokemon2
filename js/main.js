@@ -62,13 +62,13 @@ elform.addEventListener("submit", function (evt) {
 elinput3.addEventListener("input" , evt =>{
   if(elinput3.value < 1){
     elinput3.value = 1
-  }if(elinput3.value > 300){
-    elinput3.value = 300
+  }if(elinput3.value > 500){
+    elinput3.value = 500
   }
 })
 elinput4.addEventListener("input" , evt =>{
-  if(elinput4.value > 100){
-    elinput4.value = 100
+  if(elinput4.value > 1000){
+    elinput4.value = 1000
   }if(elinput4.value < 1){
     elinput4.value = 1
   }

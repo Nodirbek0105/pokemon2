@@ -35,7 +35,6 @@ header {
   width: -o-moz-aviable;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: #ffd845;
 }
 @media (max-width: 530px) {
   header {
@@ -80,7 +79,7 @@ form[data-form2] input {
 }
 
 body {
-  background-color: #ffd845;
+  background-color: var(--bg-my);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,7 +104,7 @@ body {
   max-width: 215px;
 }
 .divLeft div p {
-  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .divParent {
@@ -379,6 +378,7 @@ main {
   gap: 10px;
   flex-direction: column;
   margin-top: 10px;
+  align-items: center;
 }
 
 form {
@@ -437,4 +437,11 @@ select[data-select-weaknesses] {
   .up-div {
     right: 0;
   }
+}
+
+li[data-not-found] {
+  list-style: none;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

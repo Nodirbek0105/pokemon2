@@ -22,7 +22,6 @@ header {
   width: -o-moz-aviable;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: #ffd845;
   @media (max-width: 530px) {
     justify-content: center;
     .parent img {
@@ -55,7 +54,8 @@ form[data-form2] {
   }
 }
 body {
-  background-color: #ffd845;
+  background-color: var(--bg-my);
+  // background-color: #ffc107;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,7 +77,7 @@ body {
   justify-content: space-around;
   max-width: 215px;
   div p {
-    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
 }
 .divParent {
@@ -313,6 +313,7 @@ main {
   gap: 10px;
   flex-direction: column;
   margin-top: 10px;
+  align-items: center;
 }
 form {
   display: flex;
@@ -367,4 +368,10 @@ select[data-select-weaknesses] {
   @media (max-width:500px) {
     right: 0;
   }
+}
+li[data-not-found]{
+  list-style:none;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
 }

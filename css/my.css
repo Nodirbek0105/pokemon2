@@ -1,0 +1,9 @@
+:root{
+    --bg-my:#ffd845;
+    --bg-dark:#343a40;
+}
+
+.dark-theme{
+    --bg-my:#343a40;
+    --bg-dark:#343a40;
+}
