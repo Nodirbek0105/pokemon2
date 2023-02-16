@@ -9,6 +9,7 @@ var elform = document.querySelector("[data-form]");
 var elNavbar = document.querySelector(".navbar");
 var elContainer = document.querySelector("[data-container]");
 var elTemplate = document.querySelector("template");
+let darkMode = document.querySelector('[data-dark-mode]');
 
 renderPokemon(pokemons);
 
@@ -72,4 +73,8 @@ elinput4.addEventListener("input" , evt =>{
   }if(elinput4.value < 1){
     elinput4.value = 1
   }
+})
+darkMode.addEventListener("click" , evt =>{
+  evt.preventDefault()
+  document.body.classList.toggle("dark-theme")
 })

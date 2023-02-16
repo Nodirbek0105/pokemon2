@@ -40,7 +40,7 @@ header {
   header {
     justify-content: center;
   }
-  header .parent img {
+  header .parent svg {
     display: none;
   }
 }
@@ -80,6 +80,7 @@ form[data-form2] input {
 
 body {
   background-color: var(--bg-my);
+  transition: 0.5s linear;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,6 +163,8 @@ h1 img {
 }
 
 input {
+  background-color: var(--input);
+  color: var(--black-white);
   width: 150px;
   text-align: center;
   padding: 5px;
@@ -214,6 +217,7 @@ ul {
 .eldiv {
   height: 38%;
   width: 100%;
+  color: var(--black-white);
 }
 @media (max-width: 300px) {
   .eldiv {
@@ -238,13 +242,14 @@ ul {
   align-items: center;
   justify-content: center;
   width: 101%;
-  border-bottom: 3px solid !important;
+  border-bottom: 3px solid var(--black-white);
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
 }
 .divImg img {
   max-width: 209.76px;
+  color: var(--black-white);
 }
 @media (max-width: 300px) {
   .divImg {
@@ -264,7 +269,8 @@ select {
   padding: 5px;
   border-radius: 20px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: var(--bg-select);
+  color: var(--black-white);
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   -ms-border-radius: 20px;
@@ -273,6 +279,7 @@ select {
 
 option {
   text-align: center;
+  background-color: var(--white-black);
 }
 
 .divLeftBottom {
@@ -306,11 +313,12 @@ button {
     justify-content: center;
   }
 }
-form[data-form2] svg {
+form[data-form2] label svg {
   width: 34px;
   height: 34px;
   padding: 5px;
-  background-color: #fff;
+  background-color: var(--input);
+  color: var(--gray-white);
   border-radius: 15px 0 0 15px;
   -webkit-border-radius: 15px 0 0 15px;
   -moz-border-radius: 15px 0 0 15px;
@@ -343,7 +351,7 @@ p {
 }
 
 .elli {
-  background-color: #fff;
+  background-color: var(--input);
   margin: 10px;
   min-height: 360px;
   height: 360px;
@@ -430,11 +438,33 @@ select[data-select-weaknesses] {
   text-decoration: none;
   border-radius: 50%;
 }
-.up-div a img {
+.up-div a svg {
   transform: scale(0.5);
+  color: var(--black-white);
 }
 @media (max-width: 500px) {
   .up-div {
+    right: 0;
+  }
+}
+
+.dark-div {
+  position: fixed;
+  display: flex;
+  right: 10px;
+  top: 84%;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0d6efd;
+  color: var(--black-white);
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+@media (max-width: 500px) {
+  .dark-div {
     right: 0;
   }
 }
@@ -444,4 +474,28 @@ li[data-not-found] {
   font-weight: 900;
   font-size: 30px;
   text-align: center;
+  color: var(--black-white);
+}
+
+.dark-theme ::-moz-placeholder {
+  color: var(--input-color);
+}
+
+.dark-theme :-ms-input-placeholder {
+  color: var(--input-color);
+}
+
+.dark-theme ::placeholder {
+  color: var(--input-color);
+}
+
+.search-div {
+  color: var(--black-white);
+}
+
+.divRight {
+  color: var(--black-white);
+}
+.divRight svg {
+  transform: scale(1.5);
 }/*# sourceMappingURL=main.css.map */
