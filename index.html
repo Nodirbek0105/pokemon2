@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/my.css" />
     <link rel="website icon" type="svg" href="./img/pokemon_logo 1.svg" />
   </head>
-  <body id="top">
+  <body data-body id="top">
     <div data-container class="container">
       <header data-header>
         <div class="logo-div">
@@ -22,47 +22,58 @@
         </div>
         <div class="parent">
           <form data-form2>
-            <label for="search"><svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="Icon/Outline/search">
-                <path
-                  id="Mask"
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M5 11C5 7.691 7.691 5 11 5C14.309 5 17 7.691 17 11C17 14.309 14.309 17 11 17C7.691 17 5 14.309 5 11ZM20.707 19.293L17.312 15.897C18.365 14.543 19 12.846 19 11C19 6.589 15.411 3 11 3C6.589 3 3 6.589 3 11C3 15.411 6.589 19 11 19C12.846 19 14.543 18.365 15.897 17.312L19.293 20.707C19.488 20.902 19.744 21 20 21C20.256 21 20.512 20.902 20.707 20.707C21.098 20.316 21.098 19.684 20.707 19.293Z"
-                  fill="gray"
-                />
-                <mask
-                  id="mask0_1_25"
-                  style="mask-type: alpha"
-                  maskUnits="userSpaceOnUse"
-                  x="3"
-                  y="3"
-                  width="19"
-                  height="18"
-                >
+            <label for="search"
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="Icon/Outline/search">
                   <path
-                    id="Mask_2"
+                    id="Mask"
                     fill-rule="evenodd"
                     clip-rule="evenodd"
                     d="M5 11C5 7.691 7.691 5 11 5C14.309 5 17 7.691 17 11C17 14.309 14.309 17 11 17C7.691 17 5 14.309 5 11ZM20.707 19.293L17.312 15.897C18.365 14.543 19 12.846 19 11C19 6.589 15.411 3 11 3C6.589 3 3 6.589 3 11C3 15.411 6.589 19 11 19C12.846 19 14.543 18.365 15.897 17.312L19.293 20.707C19.488 20.902 19.744 21 20 21C20.256 21 20.512 20.902 20.707 20.707C21.098 20.316 21.098 19.684 20.707 19.293Z"
-                    fill="white"
+                    fill="gray"
                   />
-                </mask>
-                <g mask="url(#mask0_1_25)">
-                  <g id="&#240;&#159;&#142;&#168; Color">
-                    <rect id="Base" width="24" height="24" fill="currentColor" />
+                  <mask
+                    id="mask0_1_25"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="3"
+                    y="3"
+                    width="19"
+                    height="18"
+                  >
+                    <path
+                      id="Mask_2"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5 11C5 7.691 7.691 5 11 5C14.309 5 17 7.691 17 11C17 14.309 14.309 17 11 17C7.691 17 5 14.309 5 11ZM20.707 19.293L17.312 15.897C18.365 14.543 19 12.846 19 11C19 6.589 15.411 3 11 3C6.589 3 3 6.589 3 11C3 15.411 6.589 19 11 19C12.846 19 14.543 18.365 15.897 17.312L19.293 20.707C19.488 20.902 19.744 21 20 21C20.256 21 20.512 20.902 20.707 20.707C21.098 20.316 21.098 19.684 20.707 19.293Z"
+                      fill="white"
+                    />
+                  </mask>
+                  <g mask="url(#mask0_1_25)">
+                    <g id="&#240;&#159;&#142;&#168; Color">
+                      <rect
+                        id="Base"
+                        width="24"
+                        height="24"
+                        fill="currentColor"
+                      />
+                    </g>
                   </g>
                 </g>
-              </g>
-            </svg>
+              </svg>
             </label>
-            <input id="search" type="search" placeholder="search" data-input5="" />
+            <input
+              id="search"
+              type="search"
+              placeholder="search"
+              data-input5=""
+            />
           </form>
           <div class="search-div">
             <svg
@@ -128,7 +139,7 @@
               <input data-input placeholder="Image URL" />
             </div>
             <div>
-              <input data-input1 placeholder="Name" />
+              <input required data-input1 placeholder="Name" />
             </div>
             <div>
               <input data-input2 placeholder="Type" />
@@ -142,8 +153,12 @@
             <div>
               <input type="number" data-input4 placeholder="Height" />
             </div>
-            <button type="submit" class="btn-primary">add new pokemon</button>
-            <button type="reset" class="btn-primary">clearing values</button>
+            <button type="submit" class="btn-primary btn-cyan">
+              add new pokemon
+            </button>
+            <button type="reset" class="btn-primary btn-cyan">
+              clearing values
+            </button>
           </div>
         </form>
         <div class="filter">
@@ -164,7 +179,7 @@
             <option value="Ice">Ice</option>
             <option value="Ghost">Ghost</option>
             <option value="Dragon">Dragon</option>
-          </select> 
+          </select>
           <select data-select-weaknesses>
             <option value="weaknesses">Weaknesses</option>
             <option value="Fire">Fire</option>
@@ -184,7 +199,7 @@
             <option value="Dark">Dark</option>
             <option value="Steel">Steel</option>
             <option value="Dragon">Dragon</option>
-          </select>         
+          </select>
         </div>
         <div class="sort">
           <select data-select-sort name="" id="">
@@ -201,11 +216,39 @@
     </div>
     <div class="up-div">
       <a id="up" href="#top">
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M22.5 40V13.7L10.1 26.1 8 24 24 8l16 16-2.1 2.1-12.4-12.4V40Z" fill="currentColor"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+          <path
+            d="M22.5 40V13.7L10.1 26.1 8 24 24 8l16 16-2.1 2.1-12.4-12.4V40Z"
+            fill="currentColor"
+          />
+        </svg>
       </a>
     </div>
+    <div data-light-mode class="light-div">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="48"
+        viewBox="0 96 960 960"
+        width="48"
+      >
+        <path
+          d="M479.765 716Q538 716 579 675.235q41-40.764 41-99Q620 518 579.235 477q-40.764-41-99-41Q422 436 381 476.765q-41 40.764-41 99Q340 634 380.765 675q40.764 41 99 41Zm.235 60q-83 0-141.5-58.5T280 576q0-83 58.5-141.5T480 376q83 0 141.5 58.5T680 576q0 83-58.5 141.5T480 776ZM70 606q-12.75 0-21.375-8.675Q40 588.649 40 575.825 40 563 48.625 554.5T70 546h100q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T170 606H70Zm720 0q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T790 546h100q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T890 606H790ZM479.825 296Q467 296 458.5 287.375T450 266V166q0-12.75 8.675-21.375 8.676-8.625 21.5-8.625 12.825 0 21.325 8.625T510 166v100q0 12.75-8.675 21.375-8.676 8.625-21.5 8.625Zm0 720q-12.825 0-21.325-8.62-8.5-8.63-8.5-21.38V886q0-12.75 8.675-21.375 8.676-8.625 21.5-8.625 12.825 0 21.325 8.625T510 886v100q0 12.75-8.675 21.38-8.676 8.62-21.5 8.62ZM240 378l-57-56q-9-9-8.629-21.603.37-12.604 8.526-21.5 8.896-8.897 21.5-8.897Q217 270 226 279l56 57q8 9 8 21t-8 20.5q-8 8.5-20.5 8.5t-21.5-8Zm494 495-56-57q-8-9-8-21.375T678.5 774q8.5-9 20.5-9t21 9l57 56q9 9 8.629 21.603-.37 12.604-8.526 21.5-8.896 8.897-21.5 8.897Q743 882 734 873Zm-56-495q-9-9-9-21t9-21l56-57q9-9 21.603-8.629 12.604.37 21.5 8.526 8.897 8.896 8.897 21.5Q786 313 777 322l-57 56q-8 8-20.364 8-12.363 0-21.636-8ZM182.897 873.103q-8.897-8.896-8.897-21.5Q174 839 183 830l57-56q8.8-9 20.9-9 12.1 0 20.709 9Q291 783 291 795t-9 21l-56 57q-9 9-21.603 8.629-12.604-.37-21.5-8.526ZM480 576Z"
+          fill="currentColor"
+        />
+      </svg>
+    </div>
     <div data-dark-mode class="dark-div">
-        mode
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="48"
+        viewBox="0 96 960 960"
+        width="48"
+      >
+        <path
+        fill="currentColor"
+          d="M481 1027 346 896H160V710L26 576l134-134V256h186l135-134 133 134h186v186l134 134-134 134v186H614l-133 131Zm-1-452Zm1 368 108-107h151V685l109-109-109-109V316H589L481 207 371 316H220v151L111 576l109 109v151h150l111 107Zm-2-107q111 0 186-75.5T740 575q0-110-75.5-185.5T479 314q-27 0-52 5.5T373 338q69 32 111 96t42 141q0 77-42 141t-111 97q24 11 50.5 17t55.5 6Z"
+        />
+      </svg>
     </div>
     <template>
       <li class="elli">
@@ -223,15 +266,41 @@
               <p class="kg"></p>
               <p class="height"></p>
             </div>
+            <button data-delete class="btn-danger">delete</button>
           </div>
-          <div class="divRight"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 23.75C22.5 24.4387 21.94 25 21.25 25H8.75C8.06 25 7.5 24.4387 7.5 23.75V10H22.5V23.75ZM12.5 5.41C12.5 5.21625 12.7675 5 13.125 5H16.875C17.2325 5 17.5 5.21625 17.5 5.41V7.5H12.5V5.41ZM26.25 7.5H25H20V5.41C20 3.805 18.5987 2.5 16.875 2.5H13.125C11.4012 2.5 10 3.805 10 5.41V7.5H5H3.75C3.0625 7.5 2.5 8.0625 2.5 8.75C2.5 9.4375 3.0625 10 3.75 10H5V23.75C5 25.8175 6.6825 27.5 8.75 27.5H21.25C23.3175 27.5 25 25.8175 25 23.75V10H26.25C26.9375 10 27.5 9.4375 27.5 8.75C27.5 8.0625 26.9375 7.5 26.25 7.5Z" fill="black"/>
-            <mask id="mask0_1_481" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="2" y="2" width="26" height="26">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 23.75C22.5 24.4387 21.94 25 21.25 25H8.75C8.06 25 7.5 24.4387 7.5 23.75V10H22.5V23.75ZM12.5 5.41C12.5 5.21625 12.7675 5 13.125 5H16.875C17.2325 5 17.5 5.21625 17.5 5.41V7.5H12.5V5.41ZM26.25 7.5H25H20V5.41C20 3.805 18.5987 2.5 16.875 2.5H13.125C11.4012 2.5 10 3.805 10 5.41V7.5H5H3.75C3.0625 7.5 2.5 8.0625 2.5 8.75C2.5 9.4375 3.0625 10 3.75 10H5V23.75C5 25.8175 6.6825 27.5 8.75 27.5H21.25C23.3175 27.5 25 25.8175 25 23.75V10H26.25C26.9375 10 27.5 9.4375 27.5 8.75C27.5 8.0625 26.9375 7.5 26.25 7.5Z" fill="white"/>
-            </mask>
-            <g mask="url(#mask0_1_481)">
-            <rect width="30" height="30" fill="currentColor"/>
-            </g>
+          <div class="divRight">
+            <svg
+              data-star-border=""
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="currentColor"
+            >
+              <path d="M0 0h24v24H0V0z" fill="transparent" />
+              <path
+                d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
+              />
+            </svg>
+            <svg
+              class="d-n"
+              data-star
+              xmlns="http://www.w3.org/2000/svg"
+              enable-background="new 0 0 24 24"
+              height="24px"
+              viewBox="0 0 24 24"
+              width="24px"
+              fill="currentColor"
+            >
+              <g>
+                <path d="M0 0h24v24H0V0z" fill="none" />
+                <path d="M0 0h24v24H0V0z" fill="none" />
+              </g>
+              <g>
+                <path
+                  d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z"
+                />
+              </g>
             </svg>
           </div>
         </div>
@@ -241,5 +310,6 @@
     <script src="./js/pokedex.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/search.js"></script>
+    <script src="./js/delete.js"></script>
   </body>
 </html>

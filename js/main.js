@@ -10,6 +10,7 @@ var elNavbar = document.querySelector(".navbar");
 var elContainer = document.querySelector("[data-container]");
 var elTemplate = document.querySelector("template");
 let darkMode = document.querySelector('[data-dark-mode]');
+let lightMode = document.querySelector('[data-light-mode]');
 
 renderPokemon(pokemons);
 
@@ -28,14 +29,17 @@ function createElli(pokemon) {
   elTemp.querySelector(".weaknesses").textContent = pokemon.weaknesses;
   elTemp.querySelector(".kg").textContent = pokemon.weight;
   elTemp.querySelector(".height").textContent = pokemon.height;
+  elTemp.querySelector("[data-delete]").dataset.pokemonId = pokemon.id
 
   return elTemp;
 }
 
+let a =0
 elform.addEventListener("submit", function (evt) {
   evt.preventDefault();
-
+  a-= 1
   const pokemon = {
+    id:null,
     name: null,
     img: null,
     height: null,
@@ -43,7 +47,7 @@ elform.addEventListener("submit", function (evt) {
     type: [],
     weaknesses: [],
   };
-
+  pokemon.id = a
   pokemon.name = elinput1.value;
   pokemon.img = elinput.value;
   pokemon.type = elinput2.value.split(" ");
@@ -53,6 +57,7 @@ elform.addEventListener("submit", function (evt) {
 
   pokemons.unshift(pokemon);
   renderPokemon(pokemons);
+  console.log(pokemons);
 
   elinput1.value = ""
   elinput2.value = ""
@@ -76,5 +81,13 @@ elinput4.addEventListener("input" , evt =>{
 })
 darkMode.addEventListener("click" , evt =>{
   evt.preventDefault()
-  document.body.classList.toggle("dark-theme")
+  document.body.classList.add("dark-theme")
+  lightMode.style.right = "10px"
+  darkMode.style.right = "-100%"
+})
+lightMode.addEventListener("click" , evt =>{
+  evt.preventDefault()
+  document.body.classList.remove("dark-theme")
+  darkMode.style.right = "10px"
+  lightMode.style.right = "-100%"
 })
