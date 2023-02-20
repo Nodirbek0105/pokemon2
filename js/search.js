@@ -19,6 +19,7 @@ elSearch.addEventListener("click", function (evt) {
 elclose.addEventListener("click", function (evt) {
   evt.preventDefault();
 
+  elinput5.value = "";
   elform2.style.display = "none";
   elclose.classList.add("d-n");
   elSearch.setAttribute("class", "");
@@ -26,6 +27,12 @@ elclose.addEventListener("click", function (evt) {
 });
 
 elinput5.addEventListener("input", function (evt) {
+  evt.preventDefault();
+
+  searchPokemon(pokemons);
+});
+
+elinput5.addEventListener("submit", function (evt) {
   evt.preventDefault();
 
   searchPokemon(pokemons);
@@ -70,7 +77,7 @@ function weaknessesPokemon(pokemon) {
 function searchPokemon(pokemons) {
   elUL.innerHTML = "";
   const searchArr = pokemons.filter((pokemon) =>
-    pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase())
+    pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase().trim())
   );
   if (searchArr.length < 1) {
     elUL.innerHTML = "<li data-not-found>POKEMON NOT FOUND</li>";
@@ -84,7 +91,7 @@ function searchPokemon(pokemons) {
   //   if (pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase())) {
   //     searchArr.push(pokemon)
   //   }
-  // // });
+  //});
   // renderPokemon(searchArr)
   // console.log(searchArr)
 }
@@ -112,44 +119,46 @@ elSelectSort.addEventListener("change", (evt) => {
   sortPokemon(pokemons);
 });
 
-// function sortPokemon(pokemons) {
-//   if ((elSelectSort.value = "az")) {
-//     const sortedPokemon = pokemons.sort(
-//       (a, b) => a.name.charCodeAt() - b.name.charCodeAt()
-//     );
-//     renderPokemon(sortedPokemon);
-//     console.log(sortedPokemon);
-//   }
-//   if ((elSelectSort.value = "za")) {
-//     const sortedPokemon = pokemons.sort(
-//       (a, b) => b.name.charCodeAt() - a.name.charCodeAt()
-//     );
-//     renderPokemon(sortedPokemon);
-//     console.log(sortedPokemon);
-//   }
-//   if ((elSelectSort.value = "wu")) {
-//     const sortedPokemon = pokemons.sort(
-//       (a, b) => a.weight.charCodeAt() - b.weight.charCodeAt()
-//     );
-//     renderPokemon(sortedPokemon);
-//   }
-//   if ((elSelectSort.value = "wd")) {
-//     const sortedPokemon = pokemons.sort(
-//       (a, b) => b.weight.charCodeAt() - a.weight.charCodeAt()
-//     );
-//     renderPokemon(sortedPokemon);
-//     console.log(sortedPokemon);
-//   }if ((elSelectSort.value = "hu")) {
-//     const sortedPokemon = pokemons.sort(
-//       (a, b) => a.height.charCodeAt() - b.height.charCodeAt()
-//     );
-//     renderPokemon(sortedPokemon);
-//     console.log(sortedPokemon);
-//   }if ((elSelectSort.value = "hd")) {
-//     const sortedPokemon = pokemons.sort(
-//       (a, b) => b.height.charCodeAt() - a.height.charCodeAt()
-//     );
-//     renderPokemon(sortedPokemon);
-//     console.log(sortedPokemon);
-//   }
-// }
+function sortPokemon(pokemons) {
+  if ((elSelectSort.value = "za")) {
+    const sortedPokemon = pokemons.sort(
+      (a, b) => b.name.charCodeAt() - a.name.charCodeAt()
+    );
+    renderPokemon(sortedPokemon);
+    console.log(sortedPokemon);
+  }
+  if ((elSelectSort.value = "wu")) {
+    const sortedPokemon = pokemons.sort(
+      (a, b) => a.weight.charCodeAt() - b.weight.charCodeAt()
+    );
+    renderPokemon(sortedPokemon);
+  }
+  if ((elSelectSort.value = "wd")) {
+    const sortedPokemon = pokemons.sort(
+      (a, b) => b.weight.charCodeAt() - a.weight.charCodeAt()
+    );
+    renderPokemon(sortedPokemon);
+    console.log(sortedPokemon);
+  }
+  if ((elSelectSort.value = "hd")) {
+    const sortedPokemon = pokemons.sort(
+      (a, b) => b.height.charCodeAt() - a.height.charCodeAt()
+    );
+    renderPokemon(sortedPokemon);
+    console.log(sortedPokemon);
+  }
+  if ((elSelectSort.value = "hu")) {
+    const sortedPokemon = pokemons.sort(
+      (a, b) => a.height.charCodeAt() - b.height.charCodeAt()
+    );
+    renderPokemon(sortedPokemon);
+    console.log(sortedPokemon);
+  }
+  if ((elSelectSort.value = "az")) {
+    const sortedPokemon = pokemons.sort(
+      (a, b) => a.name.charCodeAt() - b.name.charCodeAt()
+    );
+    renderPokemon(sortedPokemon);
+    console.log(sortedPokemon);
+  }
+}

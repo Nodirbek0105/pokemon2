@@ -14,14 +14,27 @@ function deletePokemon(e) {
   const pokemonI = pokemons.findIndex((a) => a.id == id);
   const deleteP = pokemons.splice(pokemonI, 1);
   console.log(pokemonI);
-  renderPokemon(pokemons);
+  elT.parentElement.parentElement.parentElement.remove();
 }
 
-// elStarBorder.addEventListener('click', evt =>{
-//   elStar.classList.toggle("d-n")
-//   elStarBorder.classList.toggle("d-n")
-// })
-// elStar.addEventListener('click', evt =>{
-//   elStarBorder.classList.toggle("d-n")
-//   elStar.classList.toggle("d-n")
-// })
+elStarBorder.addEventListener("click", (evt) => {
+  elStar.classList.toggle("d-n");
+  elStarBorder.classList.toggle("d-n");
+});
+
+elStar.addEventListener("click", (evt) => {
+  elStarBorder.classList.toggle("d-n");
+  elStar.classList.toggle("d-n");
+});
+
+elSelect.addEventListener("change", (evt) => {
+  elinput5.value = "";
+});
+
+elSelectSort.addEventListener("change", (evt) => {
+  elinput5.value = "";
+});
+
+elSelectweaknesses.addEventListener("change", (evt) => {
+  elinput5.value = "";
+});

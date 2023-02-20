@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/my.css" />
     <link rel="website icon" type="svg" href="./img/pokemon_logo 1.svg" />
   </head>
-  <body data-body id="top">
+  <body data-body class="dark-theme" id="top">
     <div data-container class="container">
       <header data-header>
         <div class="logo-div">
@@ -133,6 +133,9 @@
         </div>
       </header>
       <main>
+        <div data-add>
+          +
+        </div>
         <form data-form>
           <div class="parent">
             <div>
@@ -153,10 +156,8 @@
             <div>
               <input type="number" data-input4 placeholder="Height" />
             </div>
-            <button type="submit" class="btn-primary btn-cyan">
-              add new pokemon
-            </button>
-            <button type="reset" class="btn-primary btn-cyan">
+            <button type="submit" class="btn-danger">add new pokemon</button>
+            <button type="reset" data-clear class="btn-danger">
               clearing values
             </button>
           </div>
@@ -214,8 +215,8 @@
         <ul data-ul=""></ul>
       </main>
     </div>
-    <div class="up-div">
-      <a id="up" href="#top">
+    <span class="up-div">
+      <a href="#top" id="up">
         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
           <path
             d="M22.5 40V13.7L10.1 26.1 8 24 24 8l16 16-2.1 2.1-12.4-12.4V40Z"
@@ -223,7 +224,7 @@
           />
         </svg>
       </a>
-    </div>
+    </span>
     <div data-light-mode class="light-div">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -245,8 +246,8 @@
         width="48"
       >
         <path
-        fill="currentColor"
-          d="M481 1027 346 896H160V710L26 576l134-134V256h186l135-134 133 134h186v186l134 134-134 134v186H614l-133 131Zm-1-452Zm1 368 108-107h151V685l109-109-109-109V316H589L481 207 371 316H220v151L111 576l109 109v151h150l111 107Zm-2-107q111 0 186-75.5T740 575q0-110-75.5-185.5T479 314q-27 0-52 5.5T373 338q69 32 111 96t42 141q0 77-42 141t-111 97q24 11 50.5 17t55.5 6Z"
+          fill="currentColor"
+          d="M483 976q-84 0-157.5-32t-128-86.5Q143 803 111 729.5T79 572q0-146 93-257.5T409 176q-18 98 11 192.635 29 94.635 100 165.736 71 71.101 165.5 100.143Q780 663.555 879 645.529q-26 144.206-138 237.338Q629 976 483 976Zm0-60q100 0 182-57t132-145q-90-8-173-41.5T477.5 576Q414 513 381 430.5T340 259q-88 48-144.5 130.5T139 572q0 143.333 100.333 243.667Q339.667 916 483 916Zm-6-340Zm267-128-42-94-94-42 94-42 42-94 42 94 94 42-94 42-42 94Z"
         />
       </svg>
     </div>

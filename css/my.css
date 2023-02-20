@@ -21,25 +21,5 @@
   --black-white: #fff;
   --gray-white: #fff;
   --bs-danger-hover: #202123;
-  --bs-danger: #343a40;
+  --bs-danger: #555658;
 }
-
-/* .dark-theme{
-} */
-/* 
-@keyframes dark-mode {
-  14% {
-  }
-  28% {
-  }
-  42% {
-  }
-  56% {
-  }
-  70% {
-  }
-  84% {
-  }
-  100% {
-  }
-} */
