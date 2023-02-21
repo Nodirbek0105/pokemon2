@@ -52,16 +52,11 @@ elSelectweaknesses.addEventListener("change", function (evt) {
 
 function typePokemon(pokemon) {
   elUL.innerHTML = "";
-  // pokemon.forEach(pokemoni => {
-  //   const element = pokemoni.type
-
-  // });
-
   if (elSelect.value == "type") {
     renderPokemon(pokemons);
   } else {
     renderPokemon(typeFilter(pokemon));
-  }
+  }// pokemon.forEach(pokemoni => { //   const element = pokemoni.type // });
 }
 
 function weaknessesPokemon(pokemon) {
@@ -84,16 +79,7 @@ function searchPokemon(pokemons) {
   }
   if (searchArr.length > 0) {
     renderPokemon(searchArr);
-  }
-
-  // const searchArr = []
-  // pokemons.forEach(pokemon => {
-  //   if (pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase())) {
-  //     searchArr.push(pokemon)
-  //   }
-  //});
-  // renderPokemon(searchArr)
-  // console.log(searchArr)
+  } // const searchArr = [] // pokemons.forEach(pokemon => { //   if (pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase())) { //     searchArr.push(pokemon) //   } //}); // renderPokemon(searchArr) // console.log(searchArr)
 }
 
 function typeFilter(array) {

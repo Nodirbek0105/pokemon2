@@ -40,7 +40,6 @@ let a = 0;
 
 elform.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  a = a - 1;
   const pokemon = {
     id: null,
     name: null,
@@ -60,7 +59,7 @@ elform.addEventListener("submit", function (evt) {
 
   pokemons.unshift(pokemon);
   renderPokemon(pokemons);
-  console.log(pokemons);
+  a = a - 1;
 
   elinput1.value = "";
   elinput2.value = "";
@@ -90,16 +89,12 @@ elinput4.addEventListener("input", (evt) => {
 
 darkMode.addEventListener("click", (evt) => {
   evt.preventDefault();
-  document.body.classList.add("dark-theme");
-  lightMode.style.right = "0";
-  darkMode.style.right = "-100%";
+  mode(lightMode, darkMode); // document.body.classList.add("dark-theme"); // darkMode.classList.toggle("right-nol"); // darkMode.classList.toggle("right-yuz"); // lightMode.classList.toggle("right-nol"); // lightMode.classList.toggle("right-yuz");
 });
 
 lightMode.addEventListener("click", (evt) => {
   evt.preventDefault();
-  document.body.classList.remove("dark-theme");
-  darkMode.style.right = "0";
-  lightMode.style.right = "-100%";
+  mode(lightMode, darkMode); // document.body.classList.remove("dark-theme"); // darkMode.classList.toggle("right-nol"); // darkMode.classList.toggle("right-yuz"); // lightMode.classList.toggle("right-nol"); // lightMode.classList.toggle("right-yuz");
 });
 
 elClear.addEventListener("click", (evt) => {

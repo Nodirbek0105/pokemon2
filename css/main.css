@@ -41,7 +41,7 @@ header {
     justify-content: center;
   }
   header .parent .search-div svg[data-close],
-header .parent .search-div svg[data-search] {
+  header .parent .search-div svg[data-search] {
     display: none;
   }
 }
@@ -408,10 +408,6 @@ li[data-not-found] {
   color: var(--input-color);
 }
 
-.dark-theme :-ms-input-placeholder {
-  color: var(--input-color);
-}
-
 .dark-theme ::placeholder {
   color: var(--input-color);
 }
@@ -485,7 +481,6 @@ li[data-not-found] {
   transition: 0.5s linear;
   position: fixed;
   display: flex;
-  right: 0px;
   top: 10%;
   z-index: 10;
   width: 48px;
@@ -512,7 +507,6 @@ li[data-not-found] {
   transition: 0.5s linear;
   position: fixed;
   display: flex;
-  right: -100%;
   top: 10%;
   z-index: 10;
   width: 48px;
@@ -555,4 +549,12 @@ form[data-form] {
   form[data-form] {
     display: none;
   }
+}
+
+.right-nol {
+  right: 0;
+}
+
+.right-yuz {
+  right: -100%;
 }/*# sourceMappingURL=main.css.map */
