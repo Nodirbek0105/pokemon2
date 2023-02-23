@@ -1,11 +1,11 @@
-var elform2 = document.querySelector("[data-form2]");
-var elinput5 = document.querySelector("[data-input5]");
-var elSelect = document.querySelector("[data-select]");
-var elSelectweaknesses = document.querySelector("[data-select-weaknesses]");
-var elSelectSort = document.querySelector("[data-select-sort]");
-var elSearch = document.querySelector("[data-search]");
-var elclose = document.querySelector("[data-close]");
-var elHeader = document.querySelector("[data-header]");
+let elform2 = document.querySelector("[data-form2]");
+let elinput5 = document.querySelector("[data-input5]");
+let elSelect = document.querySelector("[data-select]");
+let elSelectweaknesses = document.querySelector("[data-select-weaknesses]");
+let elSelectSort = document.querySelector("[data-select-sort]");
+let elSearch = document.querySelector("[data-search]");
+let elclose = document.querySelector("[data-close]");
+let elHeader = document.querySelector("[data-header]");
 
 elSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -28,13 +28,11 @@ elclose.addEventListener("click", function (evt) {
 
 elinput5.addEventListener("input", function (evt) {
   evt.preventDefault();
-
   searchPokemon(pokemons);
 });
 
 elinput5.addEventListener("submit", function (evt) {
   evt.preventDefault();
-
   searchPokemon(pokemons);
 });
 
@@ -75,7 +73,7 @@ function searchPokemon(pokemons) {
     pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase().trim())
   );
   if (searchArr.length < 1) {
-    elUL.innerHTML = "<li data-not-found>POKEMON NOT FOUND</li>";
+    elUL.innerHTML = innerT;
   }
   if (searchArr.length > 0) {
     renderPokemon(searchArr);
@@ -113,12 +111,6 @@ function sortPokemon(pokemons) {
     renderPokemon(sortedPokemon);
     console.log(sortedPokemon);
   }
-  if ((elSelectSort.value = "wu")) {
-    const sortedPokemon = pokemons.sort(
-      (a, b) => a.weight.charCodeAt() - b.weight.charCodeAt()
-    );
-    renderPokemon(sortedPokemon);
-  }
   if ((elSelectSort.value = "wd")) {
     const sortedPokemon = pokemons.sort(
       (a, b) => b.weight.charCodeAt() - a.weight.charCodeAt()
@@ -146,5 +138,11 @@ function sortPokemon(pokemons) {
     );
     renderPokemon(sortedPokemon);
     console.log(sortedPokemon);
+  }
+  if ((elSelectSort.value = "wu")) {
+    const sortedPokemon = pokemons.sort(
+      (a, b) => a.weight.charCodeAt() - b.weight.charCodeAt()
+    );
+    renderPokemon(sortedPokemon);
   }
 }

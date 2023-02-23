@@ -1,7 +1,8 @@
-let elDelete = document.querySelector("[data-delete]");
-let elStar = document.querySelector("[data-star]");
+let elDelete = document.querySelector("[data-delete]"); // let elStar = document.querySelector("[data-star]");
 let elStarBorder = document.querySelector("[data-star-border]");
 let elBody = document.querySelector("[data-body]");
+let innerT = "<li data-not-found>POKEMON NOT FOUND</li>"
+let elDeleteAll = document.querySelector('[data-delete-all]');
 
 elUL.addEventListener("click", (evt) => {
   deletePokemon(evt);
@@ -13,22 +14,17 @@ function deletePokemon(e) {
   let id = +elT.dataset.pokemonId;
   const pokemonI = pokemons.findIndex((a) => a.id == +id);
   const deleteP = pokemons.splice(pokemonI, 1);
-  console.log(pokemonI);
+  console.log(pokemonI); // renderPokemon(pokemons)
   elT.parentElement.parentElement.parentElement.remove();
   if (pokemons.length < 1) {
-    elUL.innerHTML = "<li data-not-found>POKEMON NOT FOUND</li>";
+    elUL.innerHTML = innerT; // elRedZone.innerHTML = ""
   }
 }
 
 elStarBorder.addEventListener("click", (evt) => {
   elStar.classList.toggle("d-n");
   elStarBorder.classList.toggle("d-n");
-});
-
-elStar.addEventListener("click", (evt) => {
-  elStarBorder.classList.toggle("d-n");
-  elStar.classList.toggle("d-n");
-});
+}); // elStar.addEventListener("click", (evt) => { elStarBorder.classList.toggle("d-n");elStar.classList.toggle("d-n");});
 
 elSelect.addEventListener("change", (evt) => {
   elinput5.value = "";
@@ -55,3 +51,10 @@ function mode(el1, el2, body = document.body) {
   el2.classList.toggle("right-nol");
   el2.classList.toggle("right-yuz");
 }
+
+elDeleteAll.addEventListener('click', evt=>{
+  pokemons = []
+  console.log(pokemons);
+  renderPokemon(pokemons)
+  elUL.innerHTML = innerT
+})
