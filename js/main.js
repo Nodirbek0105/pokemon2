@@ -12,44 +12,64 @@ let elTemplate = document.querySelector("template");
 let darkMode = document.querySelector("[data-dark-mode]");
 let lightMode = document.querySelector("[data-light-mode]");
 let elClear = document.querySelector("[data-clear]");
-let elAdd = document.querySelector("[data-add]");
 
 renderPokemon(pokemons);
 
 function renderPokemon(pokemons) {
   elUL.innerHTML = "";
-  pokemons.forEach((pokemon) => elUL.appendChild(createElli(pokemon)));
+  pokemons.forEach((pokemon) => {
+    elUL.appendChild(createElli(pokemon));
+  });
 }
 
 function createElli(pokemon) {
   const elTemp = elTemplate.content.cloneNode(true);
-
-  elTemp.querySelector("[data-img]").src = pokemon.img;
-  elTemp.querySelector("[data-img]").alt = `img pokemon ${pokemon.name}`;
-  elTemp.querySelector(".name").textContent = pokemon.name;
-  elTemp.querySelector(".type").textContent = pokemon.type;
-  elTemp.querySelector(".weaknesses").textContent = pokemon.weaknesses;
-  elTemp.querySelector(".kg").textContent = pokemon.weight;
-  elTemp.querySelector(".height").textContent = pokemon.height;
-  elTemp.querySelector("[data-delete]").dataset.pokemonId = pokemon.id;
-
+  if (pokemon.num !== Number(pokemon.num)) {
+    elTemp.querySelector("[data-img]").src = pokemon.img;
+    elTemp.querySelector("[data-img]").alt = `img pokemon ${pokemon.name}`;
+    elTemp.querySelector(".name").textContent = pokemon.name;
+    elTemp.querySelector(".type").textContent = pokemon.type;
+    elTemp.querySelector(".weaknesses").textContent = pokemon.weaknesses;
+    elTemp.querySelector(".kg").textContent = pokemon.weight;
+    elTemp.querySelector(".height").textContent = pokemon.height;
+    elTemp.querySelector(".btn-danger").dataset.pokemonId = pokemon.id;
+    elTemp.querySelector(".btn-success").dataset.pokemonFavouriteId =
+      pokemon.id;
+  }
+  if (pokemon.num === Number(pokemon.num)) {
+    elTemp.querySelector("[data-img]").src = pokemon.img;
+    elTemp.querySelector("[data-img]").alt = `img pokemon ${pokemon.name}`;
+    elTemp.querySelector(".name").textContent = pokemon.name;
+    elTemp.querySelector(".type").textContent = pokemon.type;
+    elTemp.querySelector(".weaknesses").textContent = pokemon.weaknesses;
+    elTemp.querySelector(".kg").textContent = pokemon.weight;
+    elTemp.querySelector(".height").textContent = pokemon.height;
+    elTemp.querySelector(".btn-danger").classList.add("d-n");
+    elTemp.querySelector(".btn-success").dataset.pokemonFavouriteId =
+      pokemon.id;
+    elTemp.querySelector(".btn-success").textContent = "ADDED";
+  }
   return elTemp;
 }
 
 let a = 0;
-
+let b = 152;
 elform.addEventListener("submit", function (evt) {
   evt.preventDefault();
+  id();
+  num();
   const pokemon = {
     id: null,
+    num: null,
     name: null,
     img: null,
-    height: null,
     weight: null,
     type: [],
     weaknesses: [],
+    height: null,
   };
   pokemon.id = a;
+  pokemon.num = b.toString().padStart(3, 0);
   pokemon.name = elinput1.value;
   pokemon.img = elinput.value;
   pokemon.type = elinput2.value.split(" ");
@@ -59,8 +79,6 @@ elform.addEventListener("submit", function (evt) {
 
   pokemons.unshift(pokemon);
   renderPokemon(pokemons);
-  a = a - 1;
-
   elinput1.value = "";
   elinput2.value = "";
   elinput3.value = "";
@@ -89,23 +107,21 @@ elinput4.addEventListener("input", (evt) => {
 
 darkMode.addEventListener("click", (evt) => {
   evt.preventDefault();
-  mode(lightMode, darkMode); // document.body.classList.add("dark-theme"); // darkMode.classList.toggle("right-nol"); // darkMode.classList.toggle("right-yuz"); // lightMode.classList.toggle("right-nol"); // lightMode.classList.toggle("right-yuz");
+  mode(lightMode, darkMode); // document.body.classList.add("dark-theme");  darkMode.classList.toggle("right-nol");  darkMode.classList.toggle("right-yuz");  lightMode.classList.toggle("right-nol");  lightMode.classList.toggle("right-yuz");
 });
 
 lightMode.addEventListener("click", (evt) => {
   evt.preventDefault();
-  mode(lightMode, darkMode); // document.body.classList.remove("dark-theme"); // darkMode.classList.toggle("right-nol"); // darkMode.classList.toggle("right-yuz"); // lightMode.classList.toggle("right-nol"); // lightMode.classList.toggle("right-yuz");
+  mode(lightMode, darkMode); // document.body.classList.remove("dark-theme");  darkMode.classList.toggle("right-nol");  darkMode.classList.toggle("right-yuz");  lightMode.classList.toggle("right-nol");  lightMode.classList.toggle("right-yuz");
 });
 
 elClear.addEventListener("click", (evt) => {
   elinput5.value = "";
 });
+function id() {
+  return --a;
+}
 
-elAdd.addEventListener("click", (evt) => {
-  evt.preventDefault();
-  let promptenter = prompt("You want add new Pokemon , if you want write yes");
-  if (promptenter == "yes") {
-    elAdd.style.display = "none";
-    elform.style.display = "flex";
-  }
-});
+function num() {
+  return ++b;
+}

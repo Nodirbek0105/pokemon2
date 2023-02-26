@@ -131,7 +131,6 @@
         </div>
       </header>
       <main>
-        <div data-add>+</div>
         <form data-form>
           <div class="parent">
             <div><input data-input placeholder="Image URL" /></div>
@@ -141,9 +140,7 @@
             <div><input type="number" data-input3 placeholder="Weight" /></div>
             <div><input type="text" data-input4 placeholder="Height" /></div>
             <button type="submit" class="btn-danger">add new pokemon</button>
-            <button type="reset" data-clear class="btn-danger">
-              clearing values
-            </button>
+            <button type="reset" data-clear class="btn-danger">clearing values</button>
           </div>
         </form>
         <div class="filter">
@@ -185,8 +182,6 @@
             <option value="Steel">Steel</option>
             <option value="Dragon">Dragon</option>
           </select>
-        </div>
-        <div class="sort">
           <select data-select-sort name="" id="">
             <option value="az">A-Z</option>
             <option value="za">Z-A</option>
@@ -195,12 +190,13 @@
             <option value="hu">HEIGHT UP</option>
             <option value="hd">HEIGHT DOWN</option>
           </select>
+          <button data-btn-favourite class="btn-success">Favourited Pokemons</button>
         </div>
         <ul data-ul=""></ul>
       </main>
     </div>
-    <span class="up-div">
-      <a href="#top" id="up">
+    <!-- <span> -->
+      <a href="#top" id="up" class="up-div">
         <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
           <path
             d="M22.5 40V13.7L10.1 26.1 8 24 24 8l16 16-2.1 2.1-12.4-12.4V40Z"
@@ -208,7 +204,7 @@
           />
         </svg>
       </a>
-    </span>
+    <!-- </span> -->
     <div data-light-mode class="light-div right-nol">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -252,21 +248,7 @@
               <p class="height"></p>
             </div>
             <button data-delete class="btn-danger">delete</button>
-          </div>
-          <div class="divRight">
-            <svg
-              data-star-border=""
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 0 24 24"
-              width="24px"
-              fill="currentColor"
-            >
-              <path d="M0 0h24v24H0V0z" fill="transparent" />
-              <path
-                d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"
-              />
-            </svg><!-- <svg class="d-n" data-star xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor"> <g> <path d="M0 0h24v24H0V0z" fill="none" /> <path d="M0 0h24v24H0V0z" fill="none" /> </g> <g> <path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z" /> </g> </svg> -->
+            <button data-favourite class="btn-success">ADD IN FAVOURITES</button>
           </div>
         </div>
       </li>

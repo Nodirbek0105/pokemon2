@@ -10,6 +10,8 @@
   --black-white: #000;
   --gray-white: #aaa;
   --bs-danger-hover: #bb2d3b;
+  --bs-success:#198754;
+  --bs-success-hover: var(--bs-success);
 }
 
 .dark-theme {
@@ -21,5 +23,8 @@
   --black-white: #fff;
   --gray-white: #fff;
   --bs-danger-hover: #202123;
+  --bs-success: #555658;
+  --bs-success-hover: #201123;
   --bs-danger: #555658;
+  --bs-primary:#555658;
 }
