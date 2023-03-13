@@ -19,33 +19,33 @@ elSearch.addEventListener("click", function (evt) {
 elclose.addEventListener("click", function (evt) {
   evt.preventDefault();
 
-  elform2.classList.add("d-n"); 
-  elform2.classList.remove("d-flex"); 
+  elform2.style.display = "none";
+  elform2.classList.remove("d-flex");
   elclose.classList.add("d-n");
-  elSearch.classList.add("d-n");
-  elHeader.classList.add("header");  // elinput5.value = "";  elform2.style.display = "none";  elclose.classList.add("d-n");  elSearch.setAttribute("class", "d-flex");  elHeader.classList.remove("header");
+  elSearch.classList.remove("d-n");
+  elHeader.classList.remove("header"); // elinput5.value = "";  elform2.style.display = "none";  elclose.classList.add("d-n");  elSearch.setAttribute("class", "d-flex");  elHeader.classList.remove("header");
 });
 
 elinput5.addEventListener("input", function (evt) {
   evt.preventDefault();
-  searchPokemon(pokemons);
+  searchPokemon(getAllP());
 });
 
 elinput5.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  searchPokemon(pokemons);
+  searchPokemon(getAllP());
 });
 
 elSelect.addEventListener("change", function (evt) {
   evt.preventDefault();
 
-  typePokemon(pokemons);
+  typePokemon(getAllP());
 });
 
 elSelectweaknesses.addEventListener("change", function (evt) {
   evt.preventDefault();
 
-  weaknessesPokemon(pokemons);
+  weaknessesPokemon(getAllP());
 });
 
 function typePokemon(pokemon) {
@@ -74,7 +74,10 @@ function searchPokemon(pokemons) {
   );
   if (searchArr.length > 0) {
     renderPokemon(searchArr);
-  } // const searchArr = []  pokemons.forEach(pokemon => {    if (pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase())) {      searchArr.push(pokemon)    } });  renderPokemon(searchArr)  console.log(searchArr)
+  }
+  if (searchArr.length < 1) {
+    elUL.innerHTML = innerT;
+  } // const searchArr = []  pokemons.forEach(pokemon => {    if (pokemon.name.toUpperCase().includes(elinput5.value.toUpperCase())) {      searchArr.push(pokemon)    } });  renderPokemon(searchArr)
 }
 
 function typeFilter(array) {
@@ -85,7 +88,6 @@ function typeFilter(array) {
   });
   return filteredTypeArray;
 }
-
 function weaknessFilter(array) {
   let filteredWeaknessesArray = pokemons.filter((element) => {
     if (element.weaknesses.includes(elSelectweaknesses.value)) {
@@ -94,10 +96,6 @@ function weaknessFilter(array) {
   });
   return filteredWeaknessesArray;
 }
-
 elSelectSort.addEventListener("change", (evt) => {
-  evt.preventDefault();
-  sortPokemon(pokemons);
-});
-
-//  function sortPokemon(pokemons) { if ((elSelectSort.value = "za")) {   const sortedPokemon = pokemons.sort(     (a, b) => b.name.charCodeAt() - a.name.charCodeAt()   );   renderPokemon(sortedPokemon);   console.log(sortedPokemon); } if ((elSelectSort.value = "wd")) {   const sortedPokemon = pokemons.sort(     (a, b) => b.weight.charCodeAt() - a.weight.charCodeAt()   );   renderPokemon(sortedPokemon);   console.log(sortedPokemon); } if ((elSelectSort.value = "hd")) {   const sortedPokemon = pokemons.sort(     (a, b) => b.height.charCodeAt() - a.height.charCodeAt()   );   renderPokemon(sortedPokemon);   console.log(sortedPokemon); } if ((elSelectSort.value = "hu")) {   const sortedPokemon = pokemons.sort(     (a, b) => a.height.charCodeAt() - b.height.charCodeAt()   );   renderPokemon(sortedPokemon);   console.log(sortedPokemon); } if ((elSelectSort.value = "az")) {   const sortedPokemon = pokemons.sort(     (a, b) => a.name.charCodeAt() - b.name.charCodeAt()   );   renderPokemon(sortedPokemon);   console.log(sortedPokemon); } if ((elSelectSort.value = "wu")) {   const sortedPokemon = pokemons.sort(     (a, b) => a.weight.charCodeAt() - b.weight.charCodeAt()   );   renderPokemon(sortedPokemon); } 
+  evt.preventDefault(); // sortPokemon(getAllP());
+}); //  function sortPokemon(pokemons) { if ((elSelectSort.value = "za")) {   const sortedPokemon = pokemons.sort(     (a, b) => b.name.charCodeAt() - a.name.charCodeAt()   );   renderPokemon(sortedPokemon);    } if ((elSelectSort.value = "wd")) {   const sortedPokemon = pokemons.sort(     (a, b) => b.weight.charCodeAt() - a.weight.charCodeAt()   );   renderPokemon(sortedPokemon);   } if ((elSelectSort.value = "hd")) {   const sortedPokemon = pokemons.sort(     (a, b) => b.height.charCodeAt() - a.height.charCodeAt()   );   renderPokemon(sortedPokemon);    } if ((elSelectSort.value = "hu")) {   const sortedPokemon = pokemons.sort(     (a, b) => a.height.charCodeAt() - b.height.charCodeAt()   );   renderPokemon(sortedPokemon);   } if ((elSelectSort.value = "az")) {   const sortedPokemon = pokemons.sort(     (a, b) => a.name.charCodeAt() - b.name.charCodeAt()   );   renderPokemon(sortedPokemon);   } if ((elSelectSort.value = "wu")) {   const sortedPokemon = pokemons.sort(     (a, b) => a.weight.charCodeAt() - b.weight.charCodeAt()   );   renderPokemon(sortedPokemon); }

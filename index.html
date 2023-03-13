@@ -7,7 +7,6 @@
     <title>Pokemon</title>
     <link rel="stylesheet" href="./css/bootstrapt.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/my.css" />
     <link rel="website icon" type="svg" href="./img/pokemon_logo 1.svg" />
   </head>
   <body data-body class="dark-theme" id="top">
@@ -139,8 +138,10 @@
             <div><input data-input6 placeholder="Weaknesses" /></div>
             <div><input type="number" data-input3 placeholder="Weight" /></div>
             <div><input type="text" data-input4 placeholder="Height" /></div>
-            <button type="submit" class="btn-danger">add new pokemon</button>
-            <button type="reset" data-clear class="btn-danger">clearing values</button>
+            <button type="submit" class="btn-success">add new pokemon</button>
+            <button type="reset" data-clear class="btn-danger">
+              clearing values
+            </button>
           </div>
         </form>
         <div class="filter">
@@ -190,20 +191,22 @@
             <option value="hu">HEIGHT UP</option>
             <option value="hd">HEIGHT DOWN</option>
           </select>
-          <button data-btn-favourite class="btn-success">Favourited Pokemons</button>
+          <button data-btn-favourite class="btn-success">
+            Favourited Pokemons
+          </button>
         </div>
         <ul data-ul=""></ul>
       </main>
     </div>
     <!-- <span> -->
-      <a href="#top" id="up" class="up-div">
-        <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-          <path
-            d="M22.5 40V13.7L10.1 26.1 8 24 24 8l16 16-2.1 2.1-12.4-12.4V40Z"
-            fill="currentColor"
-          />
-        </svg>
-      </a>
+    <a href="#top" id="up" class="up-div">
+      <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+        <path
+          d="M22.5 40V13.7L10.1 26.1 8 24 24 8l16 16-2.1 2.1-12.4-12.4V40Z"
+          fill="currentColor"
+        />
+      </svg>
+    </a>
     <!-- </span> -->
     <div data-light-mode class="light-div right-nol">
       <svg
@@ -231,13 +234,32 @@
         />
       </svg>
     </div>
+    <div data-modal="" class="modal d-n">
+      <div data-modal-content="" class="modal-content">
+        <div class="modal-content-close">
+          <svg
+            width="48"
+            height="48"
+            xmlns="http://www.w3.org/2000/svg"
+            style="transform: scale(0.5)"
+            data-close-modal
+          >
+            <path
+              d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"
+              fill="currentColor"
+            />
+          </svg>
+        </div>
+        <ul data-ul2="" class="modal-pokemons"></ul>
+      </div>
+    </div>
     <template>
       <li class="elli">
         <div class="divimg divImg">
           <img data-img src="" alt="" />
         </div>
         <div class="eldiv divParent">
-          <div class="divLeft">
+          <div class="divLeft delete-btn-remove">
             <div class="left-div">
               <p class="name"></p>
               <p class="type"></p>
@@ -248,7 +270,9 @@
               <p class="height"></p>
             </div>
             <button data-delete class="btn-danger">delete</button>
-            <button data-favourite class="btn-success">ADD IN FAVOURITES</button>
+            <button data-favourite class="btn-success">
+              ADD IN FAVOURITES
+            </button>
           </div>
         </div>
       </li>

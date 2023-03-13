@@ -6,6 +6,37 @@
   word-wrap: break-word;
 }
 
+:root {
+  --bg-my: #ffd845;
+  --bg-dark: #343a40;
+  --bg-select: rgba(255, 255, 255, 0.3);
+  --dark: #000;
+  --input-color: rgba(255, 255, 255, 0.3);
+  --white: #fff;
+  --input: #fff;
+  --white-black: #fff;
+  --black-white: #000;
+  --gray-white: #aaa;
+  --bs-danger-hover: #bb2d3b;
+  --bs-success: #198754;
+  --bs-success-hover: var(--bs-success);
+}
+
+.dark-theme {
+  --bg-my: #343a40;
+  --bg-dark: #343a40;
+  --input-color: #fff;
+  --white-black: #000;
+  --input: rgba(255, 255, 255, 0.3);
+  --black-white: #fff;
+  --gray-white: #fff;
+  --bs-danger-hover: #202123;
+  --bs-success: #555658;
+  --bs-success-hover: #201123;
+  --bs-danger: #555658;
+  --bs-primary: #555658;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -129,7 +160,7 @@ h1 img {
 }
 
 .d-n {
-  display: none;
+  display: none !important;
 }
 
 .parent {
@@ -540,5 +571,45 @@ form[data-form] {
 }
 
 .delete-btn-remove .btn-danger {
+  display: none;
+}
+
+.modal {
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  transition: 0.5s linear;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .modal-content {
+  background-color: var(--bg-my);
+  max-width: 80%;
+  padding: 0 0 48px 0;
+}
+@media (max-width: 500px) {
+  .modal .modal-content {
+    max-width: 95%;
+  }
+}
+.modal .modal-content .modal-content-close {
+  color: var(--black-white);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.modal .modal-content .modal-pokemons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  gap: 30px;
+}
+@media (max-width: 286px) {
+  .modal .modal-content .modal-pokemons li {
+    max-width: 260px;
+  }
+}
+.modal .modal-content button {
   display: none;
 }/*# sourceMappingURL=main.css.map */
