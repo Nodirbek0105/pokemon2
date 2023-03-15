@@ -12,16 +12,20 @@ let elTemplate = document.querySelector("template");
 let darkMode = document.querySelector("[data-dark-mode]");
 let lightMode = document.querySelector("[data-light-mode]");
 let elClear = document.querySelector("[data-clear]");
-// setAllP(pokemons)
+if (getAllP() !== null) {
+  pokemons = getAllP();
+}
+if (getAllP() === null) {
+  setAllP(pokemons);
+}
+
 renderPokemon(getAllP());
-
-
 
 function renderPokemon(pokemons) {
   elUL.innerHTML = "";
   pokemons.forEach((pokemon) => {
-    elUL.appendChild(createElli(pokemon))
-  })
+    elUL.appendChild(createElli(pokemon));
+  });
 }
 
 function createElli(pokemon) {
@@ -37,8 +41,8 @@ function createElli(pokemon) {
     elTemp.querySelector(".btn-danger").dataset.pokemonId = pokemon.id;
     elTemp.querySelector(".btn-success").dataset.pokemonFavouriteId =
       pokemon.id;
-      // elTemp.querySelector(".divLeft").classList.remove("delete-btn-remove")
-      elTemp.querySelector(".btn-success").textContent = "ADD IN FAVOURITES"
+    // elTemp.querySelector(".divLeft").classList.remove("delete-btn-remove")
+    elTemp.querySelector(".btn-success").textContent = "ADD IN FAVOURITES";
   }
   if (pokemon.num === Number(pokemon.num)) {
     elTemp.querySelector("[data-img]").src = pokemon.img;
@@ -56,7 +60,7 @@ function createElli(pokemon) {
   return elTemp;
 }
 
-let a = 0;
+let a = 1;
 let b = 152;
 elform.addEventListener("submit", function (evt) {
   evt.preventDefault();
@@ -82,7 +86,7 @@ elform.addEventListener("submit", function (evt) {
   pokemon.height = `${elinput4.value} m`;
 
   pokemons.unshift(pokemon);
-  setAllP(pokemons)
+  setAllP(pokemons);
   renderPokemon(getAllP());
   elinput1.value = "";
   elinput2.value = "";
@@ -131,20 +135,20 @@ function num() {
   return ++b;
 }
 function getP() {
-  let poke = localStorage.getItem("ac" || "[]");
-  let pokem = JSON.parse(poke);
-  return pokem;
+  let namePokemons = localStorage.getItem("favouritedPokemons" || "[]");
+  let returnedArray = JSON.parse(namePokemons);
+  return returnedArray;
 }
 function setP(array) {
-  let pok = JSON.stringify(array);
-  localStorage.setItem("ac", `${pok}`);
+  let setedArray = JSON.stringify(array);
+  localStorage.setItem("favouritedPokemons", `${setedArray}`);
 }
 function getAllP() {
-  let poke = localStorage.getItem("abc" || "[]");
-  let pokem = JSON.parse(poke);
-  return pokem;
+  let namePokemons = localStorage.getItem("allPokemons" || "[]");
+  let returnedArray = JSON.parse(namePokemons);
+  return returnedArray;
 }
 function setAllP(array) {
-  let pok = JSON.stringify(array);
-  localStorage.setItem("abc", `${pok}`);
+  let setedArray = JSON.stringify(array);
+  localStorage.setItem("allPokemons", `${setedArray}`);
 }
